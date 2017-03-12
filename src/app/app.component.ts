@@ -6,6 +6,4 @@ import { Store } from '@ngrx/store';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'ept works!';
-}
+export class AppComponent { }

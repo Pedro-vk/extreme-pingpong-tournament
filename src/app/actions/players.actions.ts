@@ -3,12 +3,13 @@ import { type } from './util';
 import { Player } from '../models/player';
 
 export const ActionTypes = {
-  MULTIADD:  type('players - multiadd'),
-  ADD:       type('players - add'),
-  UPDATE:    type('players - update'),
-  WIN:       type('players - win'),
-  LOSE:      type('players - lose'),
-  RESET:     type('players - reset'),
+  MULTIADD:     type('players/multiadd'),
+  ADD:          type('players/add'),
+  UPDATE:       type('players/update'),
+  WIN:          type('players/win'),
+  LOSE:         type('players/lose'),
+  RESET:        type('players/reset'),
+  RESET_LIVES:  type('players/reset-lives'),
 };
 
 export class MultiaddAction implements Action {
@@ -41,6 +42,12 @@ export class ResetAction implements Action {
 
   constructor(public payload: Player) { }
 }
+export class ResetLivesAction implements Action {
+  type = ActionTypes.RESET_LIVES;
+
+  constructor(public payload: number) { }
+}
+
 
 export type Actions
   = MultiaddAction
@@ -48,4 +55,5 @@ export type Actions
   | UpdateAction
   | WinAction
   | LoseAction
-  | ResetAction;
+  | ResetAction
+  | ResetLivesAction;

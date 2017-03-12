@@ -66,6 +66,16 @@ export function reducer(state: State = initialState, action: players.Actions): S
       };
     }
 
+    case players.ActionTypes.RESET_LIVES: {
+      let lives = +action.payload;
+      return {
+        ...state,
+        entities: Object.values(state.entities)
+          .map((player: Player) => ({...player, lives}))
+          .reduce((accPlayers, player: Player) => ({...accPlayers, [player.id]: player}), {}),
+      }
+    }
+
     default: {
       return state;
     }

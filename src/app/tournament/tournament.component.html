@@ -1,0 +1,18 @@
+<h2>Players</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Victories</th>
+      <th>Lives</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players | async; trackBy: player?.id">
+      <td>{{player.name}}</td>
+      <td>{{player.victories}}</td>
+      <td>{{player.lives}}</td>
+    </tr>
+  </tbody>
+</table>
