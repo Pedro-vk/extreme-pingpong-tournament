@@ -5,7 +5,7 @@ import { Player } from '../models/player';
 export const ActionTypes = {
   MULTIADD:     type('players/multiadd'),
   ADD:          type('players/add'),
-  REMOVE:          type('players/remove'),
+  REMOVE:       type('players/remove'),
   UPDATE:       type('players/update'),
   WIN:          type('players/win'),
   LOSE:         type('players/lose'),

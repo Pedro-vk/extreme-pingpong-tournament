@@ -1,5 +1,6 @@
 import { Player } from '../models/player';
 import * as players from '../actions/players.actions';
+import * as queue from '../actions/queue.actions';
 
 
 export interface State {
@@ -12,7 +13,7 @@ export const initialState: State = {
   entities: {},
 };
 
-export function reducer(state: State = initialState, action: players.Actions): State {
+export function reducer(state: State = initialState, action: players.Actions | queue.Actions): State {
   switch (action.type) {
 
     case players.ActionTypes.MULTIADD: {
@@ -23,7 +24,6 @@ export function reducer(state: State = initialState, action: players.Actions): S
           entities: {...accState.entities, [player.id]: resetPlayer(player)},
         }), state);
     }
-
     case players.ActionTypes.ADD: {
       let player = <Player>action.payload;
       return state.ids.indexOf(player.id) !== -1 ? state : {
@@ -31,7 +31,6 @@ export function reducer(state: State = initialState, action: players.Actions): S
         entities: {...state.entities, [player.id]: resetPlayer(player)},
       };
     }
-
     case players.ActionTypes.REMOVE: {
       let player = <Player>action.payload;
       let newEntites = {...state.entities};
@@ -41,7 +40,6 @@ export function reducer(state: State = initialState, action: players.Actions): S
         entities: newEntites,
       };
     }
-
     case players.ActionTypes.UPDATE: {
       let player = <Player>action.payload;
       return state.ids.indexOf(player.id) === -1 ? state : {
@@ -50,6 +48,22 @@ export function reducer(state: State = initialState, action: players.Actions): S
       };
     }
 
+    case queue.ActionTypes.RESULT: {
+      let winner = action.payload.winner;
+      let loser = action.payload.loser;
+      winner = {...state.entities[winner.id]};
+      loser = {...state.entities[loser.id]};
+      winner.victories++;
+      loser.lives--;
+      return state.ids.indexOf(winner.id) === -1 || state.ids.indexOf(loser.id) === -1 ? state : {
+        ...state,
+        entities: {
+          ...state.entities,
+          [winner.id]: winner,
+          [loser.id]: loser,
+        },
+      };
+    }
     case players.ActionTypes.WIN: {
       let player = <Player>action.payload;
       let statePlayer = <Player>state.entities[player.id];
@@ -58,7 +72,6 @@ export function reducer(state: State = initialState, action: players.Actions): S
         entities: {...state.entities, [player.id]: {...statePlayer, victories: statePlayer.victories + 1}},
       };
     }
-
     case players.ActionTypes.LOSE: {
       let player = <Player>action.payload;
       let statePlayer = <Player>state.entities[player.id];
@@ -81,7 +94,7 @@ export function reducer(state: State = initialState, action: players.Actions): S
       return {
         ...state,
         entities: Object.values(state.entities)
-          .map((player: Player) => ({...player, lives, initialLives: lives}))
+          .map((player: Player) => ({...player, lives, initialLives: lives, victories: 0}))
           .reduce((accPlayers, player: Player) => ({...accPlayers, [player.id]: player}), {}),
       }
     }
@@ -103,6 +116,8 @@ function resetPlayer({id, name}: Player): Player {
 }
 
 export const getIds = (state: State) => state.ids;
+
+export const getPlayerEntities = (state: State) => state.entities;
 
 export const getPlayers = (state: State) => Object.values(state.entities);
 
