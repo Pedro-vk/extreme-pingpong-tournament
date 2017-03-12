@@ -5,6 +5,7 @@ import { Player } from '../models/player';
 export const ActionTypes = {
   MULTIADD:     type('players/multiadd'),
   ADD:          type('players/add'),
+  REMOVE:          type('players/remove'),
   UPDATE:       type('players/update'),
   WIN:          type('players/win'),
   LOSE:         type('players/lose'),
@@ -19,6 +20,11 @@ export class MultiaddAction implements Action {
 }
 export class AddAction implements Action {
   type = ActionTypes.ADD;
+
+  constructor(public payload: Player) { }
+}
+export class RemoveAction implements Action {
+  type = ActionTypes.REMOVE;
 
   constructor(public payload: Player) { }
 }
@@ -52,6 +58,7 @@ export class ResetLivesAction implements Action {
 export type Actions
   = MultiaddAction
   | AddAction
+  | RemoveAction
   | UpdateAction
   | WinAction
   | LoseAction

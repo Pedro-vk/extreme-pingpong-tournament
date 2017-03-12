@@ -32,6 +32,16 @@ export function reducer(state: State = initialState, action: players.Actions): S
       };
     }
 
+    case players.ActionTypes.REMOVE: {
+      let player = <Player>action.payload;
+      let newEntites = {...state.entities};
+      delete newEntites[player.id];
+      return state.ids.indexOf(player.id) === -1 ? state : {
+        ids: state.ids.filter((id: string) => id !== player.id),
+        entities: newEntites,
+      };
+    }
+
     case players.ActionTypes.UPDATE: {
       let player = <Player>action.payload;
       return state.ids.indexOf(player.id) === -1 ? state : {
@@ -71,7 +81,7 @@ export function reducer(state: State = initialState, action: players.Actions): S
       return {
         ...state,
         entities: Object.values(state.entities)
-          .map((player: Player) => ({...player, lives}))
+          .map((player: Player) => ({...player, lives, initialLives: lives}))
           .reduce((accPlayers, player: Player) => ({...accPlayers, [player.id]: player}), {}),
       }
     }
@@ -87,6 +97,20 @@ function resetPlayer({id, name}: Player): Player {
     id: id || Math.random().toString(36).substr(2, 10),
     name,
     lives: 0,
+    initialLives: 0,
     victories: 0,
   };
 }
+
+export const getIds = (state: State) => state.ids;
+
+export const getPlayers = (state: State) => Object.values(state.entities);
+
+export const getPlayersByVictories = (state: State) =>
+  Object.values(state.entities)
+    .sort((a: Player, b: Player) => {
+      if (a.victories === b.victories) {
+        return b.lives - a.lives;
+      }
+      return b.victories - a.victories;
+    });
