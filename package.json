@@ -1,16 +1,24 @@
 {
   "name": "extreme-pingpong-tournament",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Extreme Pingpong tournament",
   "license": "MIT",
+  "private": true,
+  "homepage": "extreme-pingpong.xitrus.es",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pedro-vk/GraphQL-test"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --aot --sourcemap",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "create-cname": "echo $(cat package.json | grep '\"homepage\"' | cut -d '\"' -f 4) > dist/CNAME",
+    "gh-pages-travis": "npm run create-cname && gh-pages-travis"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": ">=4.0.0-beta <5.0.0",
     "@angular/compiler": ">=4.0.0-beta <5.0.0",
@@ -37,14 +45,15 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.0-beta.3",
+    "gh-pages-travis": "^1.0.4",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.1",

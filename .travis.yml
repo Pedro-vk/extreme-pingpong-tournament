@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '7'
+branches:
+  only:
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_370c02b3cdcb_key -iv $encrypted_370c02b3cdcb_iv
+  -in config/travisGitHubKey.enc -out .travisGitHub -d
+after_success:
+- npm run build
+- npm run gh-pages-travis
+env:
+  global:
+  - SSH_KEY=".travisGitHub"
+  - GIT_NAME="Pedro Gutiérrez"
+  - GIT_EMAIL="pedrogp9_6_93@hotmail.com"
+  - SOURCE_DIR="dist"
+  - DEPLOY_BRANCH="master"
