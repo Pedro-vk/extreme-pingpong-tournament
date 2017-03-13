@@ -6,7 +6,6 @@ export const ActionTypes = {
   MULTIADD:     type('players/multiadd'),
   ADD:          type('players/add'),
   REMOVE:       type('players/remove'),
-  UPDATE:       type('players/update'),
   RESET:        type('players/reset'),
   RESET_LIVES:  type('players/reset-lives'),
 };
@@ -26,11 +25,6 @@ export class RemoveAction implements Action {
 
   constructor(public payload: Player) { }
 }
-export class UpdateAction implements Action {
-  type = ActionTypes.UPDATE;
-
-  constructor(public payload: Player) { }
-}
 export class ResetAction implements Action {
   type = ActionTypes.RESET;
 
@@ -47,6 +41,5 @@ export type Actions
   = MultiaddAction
   | AddAction
   | RemoveAction
-  | UpdateAction
   | ResetAction
   | ResetLivesAction;

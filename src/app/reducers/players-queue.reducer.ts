@@ -2,24 +2,31 @@ import { Player } from '../models/player';
 import * as players from '../actions/players.actions';
 import * as queue from '../actions/queue.actions';
 
-
 export interface State {
   ids: string[];
   entities: { [id: string]: Player };
+  queue: string[];
+  playing: [string, string];
+  isPlaying: boolean;
 };
 
 export const initialState: State = {
   ids: [],
   entities: {},
+  queue: [],
+  playing: [undefined, undefined],
+  isPlaying: false,
 };
 
 export function reducer(state: State = initialState, action: players.Actions | queue.Actions): State {
   switch (action.type) {
 
+    // Add/Remove/Update players
     case players.ActionTypes.MULTIADD: {
       let playerList = <Player[]>action.payload;
       return playerList
-        .reduce((accState: State, player: Player) => ({
+        .reduce((accState: State, player: Player): State => ({
+          ...accState,
           ids: [...accState.ids, player.id],
           entities: {...accState.entities, [player.id]: resetPlayer(player)},
         }), state);
@@ -27,6 +34,7 @@ export function reducer(state: State = initialState, action: players.Actions | q
     case players.ActionTypes.ADD: {
       let player = <Player>action.payload;
       return state.ids.indexOf(player.id) !== -1 ? state : {
+        ...state,
         ids: [...state.ids, player.id],
         entities: {...state.entities, [player.id]: resetPlayer(player)},
       };
@@ -36,21 +44,24 @@ export function reducer(state: State = initialState, action: players.Actions | q
       let newEntites = {...state.entities};
       delete newEntites[player.id];
       return state.ids.indexOf(player.id) === -1 ? state : {
+        ...state,
         ids: state.ids.filter((id: string) => id !== player.id),
         entities: newEntites,
       };
     }
-    case players.ActionTypes.UPDATE: {
-      let player = <Player>action.payload;
-      return state.ids.indexOf(player.id) === -1 ? state : {
-        ids: [...state.ids, player.id],
-        entities: {...state.entities, [player.id]: resetPlayer(player)},
-      };
-    }
 
+    // When a match is finished
     case queue.ActionTypes.RESULT: {
       let winner = action.payload.winner;
       let loser = action.payload.loser;
+      let playing = <any>[...state.playing];
+      let queue = [...state.queue, loser.id];
+
+      if (playing[0] === undefined || playing[1] === undefined) {
+        console.warn('Queue not shuffled');
+        return state;
+      }
+
       winner = {...state.entities[winner.id]};
       loser = {...state.entities[loser.id]};
       if (winner.lives !== 0) {
@@ -59,6 +70,16 @@ export function reducer(state: State = initialState, action: players.Actions | q
       if (loser.lives !== 0) {
         loser.lives--;
       }
+
+      let nextPlayerId = queue[0];
+      if (!winner.lives) {
+        queue
+          .map((id: string) => state.entities[id])
+          .filter(_ => true);
+      }
+
+      playing[playing.indexOf(loser.id)] = queue.splice(0, 1)[0];
+
       return state.ids.indexOf(winner.id) === -1 || state.ids.indexOf(loser.id) === -1 ? state : {
         ...state,
         entities: {
@@ -66,17 +87,12 @@ export function reducer(state: State = initialState, action: players.Actions | q
           [winner.id]: winner,
           [loser.id]: loser,
         },
+        queue,
+        playing,
       };
     }
 
-    case players.ActionTypes.RESET: {
-      let player = <Player>action.payload;
-      return state.ids.indexOf(player.id) === -1 ? state : {
-        ...state,
-        entities: {...state.entities, [player.id]: resetPlayer(player)},
-      };
-    }
-
+    // Reset lives
     case players.ActionTypes.RESET_LIVES: {
       let lives = +action.payload;
       return {
@@ -85,6 +101,35 @@ export function reducer(state: State = initialState, action: players.Actions | q
           .map((player: Player) => ({...player, lives, initialLives: lives, victories: 0}))
           .reduce((accPlayers, player: Player) => ({...accPlayers, [player.id]: player}), {}),
       };
+    }
+
+    // Add players to queue
+    case queue.ActionTypes.ADD: {
+      return {
+        ...state,
+        queue: (<Player[]>action.payload).map((player: Player) => player.id),
+      };
+    }
+
+    // Mix the queue
+    case queue.ActionTypes.SHUFFLE: {
+      let queue = [...state.queue, ...state.playing.filter(_ => _)]
+        .filter((id, i, list) => list.indexOf(id) === i);
+      if (queue.length < 3) {
+        console.warn('Queue needs 3 or more players');
+        return state;
+      }
+      let shuffledQueue = [];
+      do {
+        let randomIndex = Math.floor(Math.random() * queue.length);
+        shuffledQueue.push(queue.splice(randomIndex, 1).pop());
+      } while (queue.length)
+      return {
+        ...state,
+        isPlaying: true,
+        playing: <any>shuffledQueue.slice(0, 2),
+        queue: shuffledQueue.slice(2),
+      }
     }
 
     default: {
@@ -103,6 +148,7 @@ function resetPlayer({id, name}: Player): Player {
   };
 }
 
+// Players
 export const getIds = (state: State) => state.ids;
 
 export const getPlayerEntities = (state: State) => state.entities;
@@ -117,3 +163,8 @@ export const getPlayersByVictories = (state: State) =>
       }
       return b.victories - a.victories;
     });
+
+// Queue
+export const getQueue = (state: State) => state.queue;
+
+export const getPlaying = (state: State) => state.playing;

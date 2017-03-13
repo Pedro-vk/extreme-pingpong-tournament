@@ -5,7 +5,6 @@ import { Player } from '../models/player';
 export const ActionTypes = {
   ADD:          type('queue/add'),
   SHUFFLE:      type('queue/shuffle'),
-  NEXT:         type('queue/next'),
   RESULT:         type('queue/result'),
 };
 
@@ -19,11 +18,6 @@ export class ShuffleAction implements Action {
 
   constructor(public payload?: any) { }
 }
-export class NextAction implements Action {
-  type = ActionTypes.NEXT;
-
-  constructor(public payload: Player) { }
-}
 export class ResultAction implements Action {
   type = ActionTypes.RESULT;
   payload: {winner: Player, loser: Player};
@@ -36,5 +30,4 @@ export class ResultAction implements Action {
 export type Actions
   = ShuffleAction
   | AddAction
-  | NextAction
   | ResultAction;
