@@ -53,8 +53,12 @@ export function reducer(state: State = initialState, action: players.Actions | q
       let loser = action.payload.loser;
       winner = {...state.entities[winner.id]};
       loser = {...state.entities[loser.id]};
-      winner.victories++;
-      loser.lives--;
+      if (winner.lives !== 0) {
+        winner.victories++;
+      }
+      if (loser.lives !== 0) {
+        loser.lives--;
+      }
       return state.ids.indexOf(winner.id) === -1 || state.ids.indexOf(loser.id) === -1 ? state : {
         ...state,
         entities: {
@@ -62,22 +66,6 @@ export function reducer(state: State = initialState, action: players.Actions | q
           [winner.id]: winner,
           [loser.id]: loser,
         },
-      };
-    }
-    case players.ActionTypes.WIN: {
-      let player = <Player>action.payload;
-      let statePlayer = <Player>state.entities[player.id];
-      return state.ids.indexOf(player.id) === -1 ? state : {
-        ...state,
-        entities: {...state.entities, [player.id]: {...statePlayer, victories: statePlayer.victories + 1}},
-      };
-    }
-    case players.ActionTypes.LOSE: {
-      let player = <Player>action.payload;
-      let statePlayer = <Player>state.entities[player.id];
-      return state.ids.indexOf(player.id) === -1 ? state : {
-        ...state,
-        entities: {...state.entities, [player.id]: {...statePlayer, lives: statePlayer.lives - 1}},
       };
     }
 
@@ -96,7 +84,7 @@ export function reducer(state: State = initialState, action: players.Actions | q
         entities: Object.values(state.entities)
           .map((player: Player) => ({...player, lives, initialLives: lives, victories: 0}))
           .reduce((accPlayers, player: Player) => ({...accPlayers, [player.id]: player}), {}),
-      }
+      };
     }
 
     default: {

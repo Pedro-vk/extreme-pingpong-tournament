@@ -1,0 +1,20 @@
+<div class="warn">
+  Any change will reset the tournament
+</div>
+<div class="align">
+  <h3>Add player</h3>
+
+  <div class="form">
+    <input type="text" [(ngModel)]="name"><!--
+ --><button (click)="add(name); name = ''" [disabled]="!name?.length">Add</button>
+  </div>
+
+  <h3>Players</h3>
+
+  <div class="list">
+    <div *ngFor="let player of players | async; trackBy: player?.id">
+      {{player.name}}
+      <button (click)="remove(player)"><i class="material-icons">delete</i></button>
+    </div>
+  </div>
+</div>

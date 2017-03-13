@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  font-weight: normal;
+  margin: 0;
+}
+button {
+  background: #eeeeee;
+  color: #333333;
+  border: 0;
+  height: 30px;
+  line-height: 30px - 2px;
+  padding: 0 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+
+  .material-icons {
+    line-height: 30px;
+  }
+}
+input {
+  height: 30px;
+  vertical-align: middle;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+
+  & + button {
+    margin-left: 10px;
+  }
+}

@@ -23,7 +23,7 @@ const reducers = {
   queue: fromQueue.reducer,
 };
 
-const localStorageSyncConfig = localStorageSync(['players'/*, 'queue'*/], true);
+const localStorageSyncConfig = localStorageSync(['players', 'queue'], true);
 
 const developmentReducer: ActionReducer<State> = compose(storeFreeze, localStorageSyncConfig, combineReducers)(reducers);
 const productionReducer: ActionReducer<State> = compose(localStorageSyncConfig, combineReducers)(reducers);

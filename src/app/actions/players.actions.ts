@@ -7,8 +7,6 @@ export const ActionTypes = {
   ADD:          type('players/add'),
   REMOVE:       type('players/remove'),
   UPDATE:       type('players/update'),
-  WIN:          type('players/win'),
-  LOSE:         type('players/lose'),
   RESET:        type('players/reset'),
   RESET_LIVES:  type('players/reset-lives'),
 };
@@ -33,16 +31,6 @@ export class UpdateAction implements Action {
 
   constructor(public payload: Player) { }
 }
-export class WinAction implements Action {
-  type = ActionTypes.WIN;
-
-  constructor(public payload: Player) { }
-}
-export class LoseAction implements Action {
-  type = ActionTypes.LOSE;
-
-  constructor(public payload: Player) { }
-}
 export class ResetAction implements Action {
   type = ActionTypes.RESET;
 
@@ -60,7 +48,5 @@ export type Actions
   | AddAction
   | RemoveAction
   | UpdateAction
-  | WinAction
-  | LoseAction
   | ResetAction
   | ResetLivesAction;

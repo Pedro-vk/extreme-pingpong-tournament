@@ -1,0 +1,49 @@
+:host {
+  position: fixed;
+  top: 80px + 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.warn {
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 0;
+  color: #555555;
+}
+.align {
+  display: table;
+  margin: auto;
+  border: 1px solid #eeeeee;
+  border-radius: 2px;
+  width: 300px;
+  margin-top: 0;
+
+  & > h3,
+  & > div {
+    padding: 10px 20px;
+  }
+  .form {
+    display: flex;
+
+    input {
+      flex: 1;
+    }
+  }
+  .list {
+    max-height: 200px;
+    border-top: 1px solid #eeeeee;
+    overflow: auto;
+
+    div {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
