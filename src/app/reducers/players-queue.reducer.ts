@@ -56,6 +56,7 @@ export function reducer(state: State = initialState, action: players.Actions | q
       let loser = action.payload.loser;
       let playing = <any>[...state.playing];
       let queue = [...state.queue, loser.id];
+      let isPlaying = true;
 
       if (playing[0] === undefined || playing[1] === undefined) {
         console.warn('Queue not shuffled');
@@ -73,12 +74,20 @@ export function reducer(state: State = initialState, action: players.Actions | q
 
       let nextPlayerId = queue[0];
       if (!winner.lives) {
-        queue
+        let nextAlive = queue
           .map((id: string) => state.entities[id])
-          .filter(_ => true);
+          .find((player: Player) => !!player.lives);
+        if (nextAlive.id === loser.id && !loser.lives) {
+          isPlaying = false;
+          queue.pop(); // Remove the added last player
+        } else {
+          let nextAliveId = state.queue.indexOf(nextAlive.id);
+          playing[playing.indexOf(loser.id)] = queue.splice(nextAliveId, 1).pop();
+          queue.push(...queue.splice(0, nextAliveId));
+        }
+      } else {
+        playing[playing.indexOf(loser.id)] = queue.splice(0, 1).pop();
       }
-
-      playing[playing.indexOf(loser.id)] = queue.splice(0, 1)[0];
 
       return state.ids.indexOf(winner.id) === -1 || state.ids.indexOf(loser.id) === -1 ? state : {
         ...state,
@@ -89,6 +98,7 @@ export function reducer(state: State = initialState, action: players.Actions | q
         },
         queue,
         playing,
+        isPlaying,
       };
     }
 
@@ -168,3 +178,5 @@ export const getPlayersByVictories = (state: State) =>
 export const getQueue = (state: State) => state.queue;
 
 export const getPlaying = (state: State) => state.playing;
+
+export const isPlaying = (state: State) => state.isPlaying;

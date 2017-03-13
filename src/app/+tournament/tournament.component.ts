@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import { Player } from '../models';
 import * as players from '../actions/players.actions';
 import * as queue from '../actions/queue.actions';
-import { State, getPlayersByVictories, getQueuePlayers, getPlayingPlayers } from '../reducers';
+import { State, getPlayersByVictories, getQueuePlayers, getPlayingPlayers, isPlaying, getMaxVictories } from '../reducers';
 
 @Component({
   selector: 'ept-tournament',
@@ -19,6 +19,8 @@ export class TournamentComponent implements OnInit {
   leaderboard: Observable<Player[]>;
   playing: Observable<Player[]>;
   queue: Observable<Player[]>;
+  isPlaying: Observable<boolean>;
+  maxVictories: Observable<number>;
 
   constructor(private store: Store<State>) { }
 
@@ -28,7 +30,10 @@ export class TournamentComponent implements OnInit {
         .filter(_ => _)
         .map((player: Player) => <any>({
           ...player,
-          livesList: Array(player.lives).fill(0),
+          livesList: [
+            ...Array(player.lives).fill(true),
+            ...Array(player.initialLives - player.lives).fill(false),
+          ]
         }));
     };
 
@@ -40,6 +45,10 @@ export class TournamentComponent implements OnInit {
       .map(livesToArray);
     this.queue = this.store
       .select(getQueuePlayers);
+    this.isPlaying = this.store
+      .select(isPlaying);
+    this.maxVictories = this.store
+      .select(getMaxVictories);
   }
 
   startTournament(): void {

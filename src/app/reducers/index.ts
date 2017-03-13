@@ -43,10 +43,17 @@ export const getPlayerEntities = createSelector(getPlayersState, fromPlayersQueu
 export const getPlayersList = createSelector(getPlayersState, fromPlayersQueue.getPlayers);
 export const getPlayersByVictories = createSelector(getPlayersState, fromPlayersQueue.getPlayersByVictories);
 
+export const getMaxVictories = createSelector(getPlayersList, (players: Player[]) => {
+  return players
+    .reduce((acc: number, player: Player) => Math.max(acc, player.victories), 0);
+});
+
 // Queue
 export const getQueue = createSelector(getPlayersState, fromPlayersQueue.getQueue);
 export const getPlaying = createSelector(getPlayersState, fromPlayersQueue.getPlaying);
+export const isPlaying = createSelector(getPlayersState, fromPlayersQueue.isPlaying);
 
+// Player + Queue
 export const getQueuePlayers = createSelector(getQueue, getPlayerEntities, (queue: string[], players: {[id: string]: Player}) => {
   return queue.map((id: string) => players[id]);
 });

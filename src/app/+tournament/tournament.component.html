@@ -8,7 +8,7 @@
 </header>
 <content>
 
-  <div class="game">
+  <div class="game" *ngIf="isPlaying | async">
     <div class="playing" *ngIf="playing | async; let playingList">
       <div class="player player-n{{i}}" *ngFor="let player of playing | async; let i = index; trackBy: player?.id">
         <div class="name">
@@ -19,7 +19,9 @@
           {{player?.victories}}
         </div>
         <div class="lives">
-          <i class="material-icons" *ngFor="let n of player?.livesList">favorite</i>
+          <i class="material-icons" *ngFor="let hasLive of player?.livesList">
+            {{hasLive ? 'favorite' : 'favorite_border'}}
+          </i>
         </div>
         <div>
           <button (click)="matchFinished(player, playingList[1 - i])">Winner!</button>
@@ -39,10 +41,10 @@
   <div class="leaderboard">
     <div class="title">Leaderboard</div>
     <div class="player" *ngFor="let player of leaderboard | async; let i = index; let first = first; trackBy: player?.id">
-      <span class="number" *ngIf="first">
+      <span class="number" *ngIf="player.victories === (maxVictories | async)">
         <i class="material-icons">whatshot</i>
       </span>
-      <span class="number" *ngIf="!first">
+      <span class="number" *ngIf="player.victories !== (maxVictories | async)">
         {{i + 1}}
       </span>
       <span class="name">
@@ -53,7 +55,9 @@
         {{player?.victories}}
       </span>
       <span class="lives">
-        <i class="material-icons" *ngFor="let n of player?.livesList">favorite</i>
+        <i class="material-icons" *ngFor="let hasLive of player?.livesList">
+          {{hasLive ? 'favorite' : 'favorite_border'}}
+        </i>
       </span>
     </div>
   </div>
