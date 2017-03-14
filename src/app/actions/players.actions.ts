@@ -3,18 +3,11 @@ import { type } from './util';
 import { Player } from '../models/player';
 
 export const ActionTypes = {
-  MULTIADD:     type('players/multiadd'),
   ADD:          type('players/add'),
   REMOVE:       type('players/remove'),
-  RESET:        type('players/reset'),
   RESET_LIVES:  type('players/reset-lives'),
 };
 
-export class MultiaddAction implements Action {
-  type = ActionTypes.MULTIADD;
-
-  constructor(public payload: Player[]) { }
-}
 export class AddAction implements Action {
   type = ActionTypes.ADD;
 
@@ -22,11 +15,6 @@ export class AddAction implements Action {
 }
 export class RemoveAction implements Action {
   type = ActionTypes.REMOVE;
-
-  constructor(public payload: Player) { }
-}
-export class ResetAction implements Action {
-  type = ActionTypes.RESET;
 
   constructor(public payload: Player) { }
 }
@@ -38,8 +26,6 @@ export class ResetLivesAction implements Action {
 
 
 export type Actions
-  = MultiaddAction
-  | AddAction
+  = AddAction
   | RemoveAction
-  | ResetAction
   | ResetLivesAction;

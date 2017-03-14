@@ -22,15 +22,6 @@ export function reducer(state: State = initialState, action: players.Actions | q
   switch (action.type) {
 
     // Add/Remove/Update players
-    case players.ActionTypes.MULTIADD: {
-      let playerList = <Player[]>action.payload;
-      return playerList
-        .reduce((accState: State, player: Player): State => ({
-          ...accState,
-          ids: [...accState.ids, player.id],
-          entities: {...accState.entities, [player.id]: resetPlayer(player)},
-        }), state);
-    }
     case players.ActionTypes.ADD: {
       let player = <Player>action.payload;
       return state.ids.indexOf(player.id) !== -1 ? state : {
