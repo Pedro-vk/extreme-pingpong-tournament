@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/take';
 
 import { Player } from '../../models';
 import * as players from '../../actions/players.actions';
