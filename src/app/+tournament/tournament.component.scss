@@ -47,7 +47,11 @@ content {
 .leaderboard {
   margin: 40px;
 }
-
+.no-players {
+  color: #999999;
+  font-size: 34px;
+  font-weight: 300;
+}
 .playing {
   display: flex;
   margin: auto;
