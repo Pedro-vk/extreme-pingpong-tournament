@@ -981,7 +981,8 @@ function View_TournamentComponent_0() {
         check(view, 16, 0, currVal_2);
         var currVal_3 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 24).transform(comp.isPlaying));
         check(view, 23, 0, currVal_3);
-        var currVal_4 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 28).transform(comp.leaderboard));
+        var tmp_4_0 = null;
+        var currVal_4 = (((tmp_4_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 28).transform(comp.leaderboard))) == null) ? null : tmp_4_0.length);
         check(view, 27, 0, currVal_4);
     }, null);
 }
@@ -2160,7 +2161,7 @@ function reducer(state, action) {
             var queue_2 = state.queue.concat(state.playing.filter(function (_) { return _; })).filter(function (id, i, list) { return list.indexOf(id) === i; });
             if (queue_2.length < 3) {
                 console.warn('Queue needs 3 or more players');
-                return state;
+                return __assign({}, state, { isPlaying: false });
             }
             var shuffledQueue = [];
             do {
