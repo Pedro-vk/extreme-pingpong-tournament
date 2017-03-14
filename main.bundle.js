@@ -635,7 +635,7 @@ function View_TournamentComponent_1() {
         check(view, 12, 0, currVal_1, currVal_2);
     }, null);
 }
-function View_TournamentComponent_7() {
+function View_TournamentComponent_8() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 4, 'span', [[
                 'class',
@@ -652,7 +652,7 @@ function View_TournamentComponent_7() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      '])
     ], null, null);
 }
-function View_TournamentComponent_8() {
+function View_TournamentComponent_9() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'span', [[
                 'class',
@@ -669,7 +669,7 @@ function View_TournamentComponent_8() {
         check(view, 1, 0, currVal_0);
     });
 }
-function View_TournamentComponent_9() {
+function View_TournamentComponent_10() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'i', [[
                 'class',
@@ -686,7 +686,7 @@ function View_TournamentComponent_9() {
         check(view, 1, 0, currVal_0);
     });
 }
-function View_TournamentComponent_6() {
+function View_TournamentComponent_7() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 24, 'div', [[
                 'class',
@@ -694,7 +694,7 @@ function View_TournamentComponent_6() {
             ]
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_7),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_8),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
@@ -705,7 +705,7 @@ function View_TournamentComponent_6() {
         }, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_8),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_9),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
@@ -749,7 +749,7 @@ function View_TournamentComponent_6() {
             ]
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n        ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 1, null, View_TournamentComponent_9),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 1, null, View_TournamentComponent_10),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
@@ -776,6 +776,45 @@ function View_TournamentComponent_6() {
         var currVal_1 = ((view.context.$implicit == null) ? null : view.context.$implicit.victories);
         check(view, 17, 0, currVal_1);
     });
+}
+function View_TournamentComponent_6() {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 8, 'div', [[
+                'class',
+                'leaderboard'
+            ]
+        ], null, null, null, null, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'div', [[
+                'class',
+                'title'
+            ]
+        ], null, null, null, null, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Leaderboard']),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_7),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
+        ], {
+            ngForOf: [
+                0,
+                'ngForOf'
+            ],
+            ngForTrackBy: [
+                1,
+                'ngForTrackBy'
+            ]
+        }, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  '])
+    ], function (check, view) {
+        var comp = view.component;
+        var currVal_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 7).transform(comp.leaderboard));
+        var currVal_1 = ((comp.player == null) ? null : comp.player.id);
+        check(view, 6, 0, currVal_0, currVal_1);
+    }, null);
 }
 function View_TournamentComponent_0() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](2, [
@@ -896,7 +935,7 @@ function View_TournamentComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Close']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 18, 'content', [], null, null, null, null, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 12, 'content', [], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_1),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
@@ -909,36 +948,16 @@ function View_TournamentComponent_0() {
         }, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 8, 'div', [[
-                'class',
-                'leaderboard'
-            ]
-        ], null, null, null, null, null),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'div', [[
-                'class',
-                'title'
-            ]
-        ], null, null, null, null, null),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Leaderboard']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_6),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
-        ], {
-            ngForOf: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
+        ], { ngIf: [
                 0,
-                'ngForOf'
-            ],
-            ngForTrackBy: [
-                1,
-                'ngForTrackBy'
+                'ngIf'
             ]
         }, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](8388608, null, null, 1, 'router-outlet', [], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](73728, null, 0, __WEBPACK_IMPORTED_MODULE_4__angular_router__["y" /* RouterOutlet */], [
@@ -962,9 +981,8 @@ function View_TournamentComponent_0() {
         check(view, 16, 0, currVal_2);
         var currVal_3 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 24).transform(comp.isPlaying));
         check(view, 23, 0, currVal_3);
-        var currVal_4 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 33).transform(comp.leaderboard));
-        var currVal_5 = ((comp.player == null) ? null : comp.player.id);
-        check(view, 32, 0, currVal_4, currVal_5);
+        var currVal_4 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 28).transform(comp.leaderboard));
+        check(view, 27, 0, currVal_4);
     }, null);
 }
 var RenderType_TournamentComponent_Host = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_23" /* ɵcrt */]({
@@ -1485,7 +1503,8 @@ var AppModuleInjector = (function (_super) {
     Object.defineProperty(AppModuleInjector.prototype, "_ROUTES_50", {
         get: function () {
             if ((this.__ROUTES_50 == null)) {
-                (this.__ROUTES_50 = [[{
+                (this.__ROUTES_50 = [[
+                        {
                             path: '',
                             component: __WEBPACK_IMPORTED_MODULE_16__app_tournament_tournament_component__["a" /* TournamentComponent */],
                             children: [{
@@ -1493,8 +1512,13 @@ var AppModuleInjector = (function (_super) {
                                     component: __WEBPACK_IMPORTED_MODULE_17__app_tournament_players_players_component__["a" /* PlayersComponent */]
                                 }
                             ]
+                        },
+                        {
+                            path: '**',
+                            redirectTo: ''
                         }
-                    ]]);
+                    ]
+                ]);
             }
             return this.__ROUTES_50;
         },
@@ -1978,7 +2002,8 @@ var AppModuleNgFactory = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* 
 var routes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_0__tournament__["a" /* TournamentComponent */], children: [
             { path: 'players', component: __WEBPACK_IMPORTED_MODULE_0__tournament__["b" /* PlayersComponent */] }
-        ] }
+        ] },
+    { path: '**', redirectTo: '' },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
