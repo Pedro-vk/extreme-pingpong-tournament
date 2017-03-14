@@ -112,6 +112,16 @@ var RenderType_PlayersComponent = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_
 });
 function View_PlayersComponent_1() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'div', [[
+                'class',
+                'no-players'
+            ]
+        ], null, null, null, null, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['No players yet.'])
+    ], null, null);
+}
+function View_PlayersComponent_2() {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 5, 'div', [], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, [
             '\n      ',
@@ -152,7 +162,7 @@ function View_PlayersComponent_0() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  Any change will reset the tournament\n']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 26, 'div', [[
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 30, 'div', [[
                 'class',
                 'align'
             ]
@@ -207,6 +217,10 @@ function View_PlayersComponent_0() {
             ],
             [
                 null,
+                'keyup.enter'
+            ],
+            [
+                null,
                 'input'
             ],
             [
@@ -243,6 +257,11 @@ function View_PlayersComponent_0() {
             if (('ngModelChange' === eventName)) {
                 var pd_4 = ((comp.name = $event) !== false);
                 allowDefault = (pd_4 && allowDefault);
+            }
+            if (('keyup.enter' === eventName)) {
+                comp.add(comp.name);
+                var pd_5 = ((comp.name = '') !== false);
+                allowDefault = (pd_5 && allowDefault);
             }
             return allowDefault;
         }, null, null),
@@ -302,14 +321,25 @@ function View_PlayersComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'h3', [], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Players']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n\n  ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 5, 'div', [[
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 9, 'div', [[
                 'class',
                 'list'
             ]
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_PlayersComponent_1),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_4__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_4__angular_common__["l" /* NgIf */], [
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
+        ], { ngIf: [
+                0,
+                'ngIf'
+            ]
+        }, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_4__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_PlayersComponent_2),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_4__angular_common__["n" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
@@ -331,9 +361,12 @@ function View_PlayersComponent_0() {
         var comp = view.component;
         var currVal_0 = comp.name;
         check(view, 13, 0, currVal_0);
-        var currVal_1 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 27).transform(comp.players));
-        var currVal_2 = ((comp.player == null) ? null : comp.player.id);
-        check(view, 26, 0, currVal_1, currVal_2);
+        var tmp_1_0 = null;
+        var currVal_1 = !(((tmp_1_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 27).transform(comp.players))) == null) ? null : tmp_1_0.length);
+        check(view, 26, 0, currVal_1);
+        var currVal_2 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 31).transform(comp.players));
+        var currVal_3 = ((comp.player == null) ? null : comp.player.id);
+        check(view, 30, 0, currVal_2, currVal_3);
     }, function (check, view) {
         var comp = view.component;
         var currVal_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 15).ngClassUntouched;
@@ -381,7 +414,7 @@ var PlayersComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_28
  * @fileoverview This file is generated by the Angular template compiler.
  * Do not edit.
  * @suppress {suspiciousCode,uselessCode,missingProperties}
- */ var styles = ['[_nghost-%COMP%] {\n  position: fixed;\n  top: 140px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #ffffff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  overflow: auto; }\n\n.warn[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 20px;\n  margin: auto;\n  margin-bottom: 0;\n  color: #555555; }\n\n.align[_ngcontent-%COMP%] {\n  display: table;\n  margin: auto;\n  border: 1px solid #eeeeee;\n  border-radius: 2px;\n  width: 300px;\n  margin-top: 0; }\n  .align[_ngcontent-%COMP%]    > h3[_ngcontent-%COMP%], .align[_ngcontent-%COMP%]    > div[_ngcontent-%COMP%] {\n    padding: 10px 20px; }\n  .align[_ngcontent-%COMP%]   .form[_ngcontent-%COMP%] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; }\n    .align[_ngcontent-%COMP%]   .form[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1; }\n  .align[_ngcontent-%COMP%]   .list[_ngcontent-%COMP%] {\n    max-height: 200px;\n    border-top: 1px solid #eeeeee;\n    overflow: auto; }\n    .align[_ngcontent-%COMP%]   .list[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n      padding: 10px 0px;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; }'];
+ */ var styles = ['[_nghost-%COMP%] {\n  position: fixed;\n  top: 140px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #ffffff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  overflow: auto; }\n\n.warn[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 20px;\n  margin: auto;\n  margin-bottom: 0;\n  color: #555555; }\n\n.align[_ngcontent-%COMP%] {\n  display: table;\n  margin: auto;\n  border: 1px solid #eeeeee;\n  border-radius: 2px;\n  width: 300px;\n  margin-top: 0; }\n  .align[_ngcontent-%COMP%]    > h3[_ngcontent-%COMP%], .align[_ngcontent-%COMP%]    > div[_ngcontent-%COMP%] {\n    padding: 10px 20px; }\n  .align[_ngcontent-%COMP%]   .form[_ngcontent-%COMP%] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; }\n    .align[_ngcontent-%COMP%]   .form[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1;\n      padding: 0 10px;\n      outline: 0; }\n  .align[_ngcontent-%COMP%]   .list[_ngcontent-%COMP%] {\n    max-height: 200px;\n    border-top: 1px solid #eeeeee;\n    overflow: auto; }\n    .align[_ngcontent-%COMP%]   .list[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n      padding: 10px 0px;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; }\n    .align[_ngcontent-%COMP%]   .list[_ngcontent-%COMP%]   .no-players[_ngcontent-%COMP%] {\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      padding-bottom: 12px;\n      font-size: 16px;\n      color: #999999;\n      width: 100%; }'];
 //# sourceMappingURL=players.component.scss.shim.ngstyle.js.map
 
 /***/ }),
@@ -477,7 +510,7 @@ function View_TournamentComponent_3() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n          ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 1, null, View_TournamentComponent_4),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
@@ -529,7 +562,7 @@ function View_TournamentComponent_2() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_3),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
@@ -585,7 +618,7 @@ function View_TournamentComponent_1() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_2),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
         ], { ngIf: [
@@ -609,7 +642,7 @@ function View_TournamentComponent_1() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['next']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_5),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
@@ -705,7 +738,7 @@ function View_TournamentComponent_8() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_9),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
         ], { ngIf: [
@@ -716,7 +749,7 @@ function View_TournamentComponent_8() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_10),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
         ], { ngIf: [
@@ -760,7 +793,7 @@ function View_TournamentComponent_8() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n        ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 1, null, View_TournamentComponent_11),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
@@ -803,7 +836,7 @@ function View_TournamentComponent_7() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Leaderboard']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_8),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* IterableDiffers */]
@@ -948,7 +981,7 @@ function View_TournamentComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 16, 'content', [], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_1),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
         ], { ngIf: [
@@ -959,7 +992,7 @@ function View_TournamentComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_6),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
         ], { ngIf: [
@@ -970,7 +1003,7 @@ function View_TournamentComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_7),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
         ], { ngIf: [
