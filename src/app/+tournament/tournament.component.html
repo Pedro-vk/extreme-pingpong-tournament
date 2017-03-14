@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="leaderboard">
+  <div class="leaderboard" *ngIf="(leaderboard | async)?.length">
     <div class="title">Leaderboard</div>
     <div class="player" *ngFor="let player of leaderboard | async; let i = index; let first = first; trackBy: player?.id">
       <span class="number" *ngIf="player.victories === (maxVictories | async)">

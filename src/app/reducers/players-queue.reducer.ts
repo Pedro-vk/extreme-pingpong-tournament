@@ -127,7 +127,10 @@ export function reducer(state: State = initialState, action: players.Actions | q
         .filter((id, i, list) => list.indexOf(id) === i);
       if (queue.length < 3) {
         console.warn('Queue needs 3 or more players');
-        return state;
+        return {
+          ...state,
+          isPlaying: false,
+        };
       }
       let shuffledQueue = [];
       do {

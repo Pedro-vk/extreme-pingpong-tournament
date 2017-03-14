@@ -5,7 +5,8 @@ import { TournamentComponent, PlayersComponent } from './+tournament';
 const routes: Routes = [
   {path: '', component: TournamentComponent, children: [
     {path: 'players', component: PlayersComponent}
-  ]}
+  ]},
+  {path: '**', redirectTo: ''},
 ];
 
 @NgModule({
