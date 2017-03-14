@@ -635,7 +635,17 @@ function View_TournamentComponent_1() {
         check(view, 12, 0, currVal_1, currVal_2);
     }, null);
 }
-function View_TournamentComponent_8() {
+function View_TournamentComponent_6() {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'div', [[
+                'class',
+                'no-players'
+            ]
+        ], null, null, null, null, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    No players yet.\n  '])
+    ], null, null);
+}
+function View_TournamentComponent_9() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 4, 'span', [[
                 'class',
@@ -652,7 +662,7 @@ function View_TournamentComponent_8() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      '])
     ], null, null);
 }
-function View_TournamentComponent_9() {
+function View_TournamentComponent_10() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'span', [[
                 'class',
@@ -669,7 +679,7 @@ function View_TournamentComponent_9() {
         check(view, 1, 0, currVal_0);
     });
 }
-function View_TournamentComponent_10() {
+function View_TournamentComponent_11() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'i', [[
                 'class',
@@ -686,7 +696,7 @@ function View_TournamentComponent_10() {
         check(view, 1, 0, currVal_0);
     });
 }
-function View_TournamentComponent_7() {
+function View_TournamentComponent_8() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 24, 'div', [[
                 'class',
@@ -694,7 +704,7 @@ function View_TournamentComponent_7() {
             ]
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_8),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_9),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
@@ -705,7 +715,7 @@ function View_TournamentComponent_7() {
         }, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n      ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_9),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_10),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
@@ -749,7 +759,7 @@ function View_TournamentComponent_7() {
             ]
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n        ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 1, null, View_TournamentComponent_10),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 1, null, View_TournamentComponent_11),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
@@ -777,7 +787,7 @@ function View_TournamentComponent_7() {
         check(view, 17, 0, currVal_1);
     });
 }
-function View_TournamentComponent_6() {
+function View_TournamentComponent_7() {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_24" /* ɵvid */](0, [
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 8, 'div', [[
                 'class',
@@ -792,7 +802,7 @@ function View_TournamentComponent_6() {
         ], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Leaderboard']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n    ']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_7),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_8),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["l" /* NgForOf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */],
@@ -935,7 +945,7 @@ function View_TournamentComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['Close']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n']),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 12, 'content', [], null, null, null, null, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_25" /* ɵeld */](0, null, null, 16, 'content', [], null, null, null, null, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_1),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
@@ -949,6 +959,17 @@ function View_TournamentComponent_0() {
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  ']),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_6),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
+        ], { ngIf: [
+                0,
+                'ngIf'
+            ]
+        }, null),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */](65536, __WEBPACK_IMPORTED_MODULE_2__angular_common__["m" /* AsyncPipe */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* ChangeDetectorRef */]]),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_26" /* ɵted */](null, ['\n  ']),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵand */](8388608, null, null, 2, null, View_TournamentComponent_7),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵdid */](8192, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["n" /* NgIf */], [
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* ViewContainerRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* TemplateRef */]
@@ -982,8 +1003,11 @@ function View_TournamentComponent_0() {
         var currVal_3 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 24).transform(comp.isPlaying));
         check(view, 23, 0, currVal_3);
         var tmp_4_0 = null;
-        var currVal_4 = (((tmp_4_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 28).transform(comp.leaderboard))) == null) ? null : tmp_4_0.length);
+        var currVal_4 = !(((tmp_4_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 28).transform(comp.leaderboard))) == null) ? null : tmp_4_0.length);
         check(view, 27, 0, currVal_4);
+        var tmp_5_0 = null;
+        var currVal_5 = (((tmp_5_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵunv */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵnov */](view, 32).transform(comp.leaderboard))) == null) ? null : tmp_5_0.length);
+        check(view, 31, 0, currVal_5);
     }, null);
 }
 var RenderType_TournamentComponent_Host = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_23" /* ɵcrt */]({
@@ -1019,7 +1043,7 @@ var TournamentComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["
  * @fileoverview This file is generated by the Angular template compiler.
  * Do not edit.
  * @suppress {suspiciousCode,uselessCode,missingProperties}
- */ var styles = ['header[_ngcontent-%COMP%] {\n  height: 60px;\n  line-height: 58px;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  background: #fcfcfc;\n  padding: 0 20px;\n  border-bottom: 1px solid #eeeeee;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    margin: 0;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1; }\n  header[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]    + .post-hidden[_ngcontent-%COMP%] {\n    display: none; }\n  header[_ngcontent-%COMP%]   .hidden[_ngcontent-%COMP%] {\n    display: none; }\n    header[_ngcontent-%COMP%]   .hidden[_ngcontent-%COMP%]    + .post-hidden[_ngcontent-%COMP%] {\n      display: block; }\n  header[_ngcontent-%COMP%]   .restart[_ngcontent-%COMP%] {\n    margin-right: 20px; }\n\ncontent[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 0;\n  width: 100%;\n  padding: 20px;\n  overflow: auto;\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n\n.game[_ngcontent-%COMP%], .leaderboard[_ngcontent-%COMP%] {\n  margin: 40px; }\n\n.playing[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin: auto;\n  width: 440px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n  .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%] {\n    width: 200px;\n    text-align: center; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n      font-size: 20px;\n      color: #333333;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%], .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%] {\n      width: 60px;\n      display: inline-block;\n      vertical-align: middle;\n      padding: 10px 0;\n      color: #666666; }\n      .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%], .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        color: #999999; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%] {\n      font-size: 20px; }\n      .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        font-size: 20px;\n        vertical-align: middle;\n        position: relative;\n        top: -2px; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n      font-size: 12px; }\n    .playing[_ngcontent-%COMP%]   .player-n0[_ngcontent-%COMP%] {\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .playing[_ngcontent-%COMP%]   .player-n1[_ngcontent-%COMP%] {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n  .playing[_ngcontent-%COMP%]   .vs[_ngcontent-%COMP%] {\n    -webkit-box-ordinal-group: 3;\n        -ms-flex-order: 2;\n            order: 2;\n    color: #999;\n    font-size: 30px;\n    font-weight: 300;\n    width: 40px;\n    text-align: center; }\n\n.queue[_ngcontent-%COMP%] {\n  text-align: center;\n  padding-top: 30px; }\n  .queue[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n    color: #999999;\n    padding-bottom: 10px; }\n  .queue[_ngcontent-%COMP%]   .next-player[_ngcontent-%COMP%] {\n    padding: 4px 0; }\n\n.leaderboard[_ngcontent-%COMP%] {\n  width: 320px;\n  text-align: left; }\n  .leaderboard[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n    border-bottom: 1px solid #cccccc;\n    padding-bottom: 4px;\n    margin-bottom: 6px;\n    font-size: 20px;\n    color: #333333; }\n  .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 4px 0; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n      display: inline-block;\n      vertical-align: middle;\n      line-height: 22px; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .number[_ngcontent-%COMP%] {\n      width: 30px;\n      text-align: center;\n      font-size: 20px;\n      color: #666666;\n      line-height: 20px; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1;\n      padding-left: 10px;\n      font-size: 18px;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%] {\n      font-size: 18px;\n      padding: 0 16px;\n      color: #333333; }\n      .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        font-size: 16px;\n        vertical-align: middle;\n        position: relative;\n        top: -2px;\n        color: #999999;\n        margin-right: 2px; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%] {\n      width: 60px;\n      color: #666666; }\n      .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        font-size: 12px;\n        line-height: 20px; }'];
+ */ var styles = ['header[_ngcontent-%COMP%] {\n  height: 60px;\n  line-height: 58px;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  background: #fcfcfc;\n  padding: 0 20px;\n  border-bottom: 1px solid #eeeeee;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    margin: 0;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1; }\n  header[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]    + .post-hidden[_ngcontent-%COMP%] {\n    display: none; }\n  header[_ngcontent-%COMP%]   .hidden[_ngcontent-%COMP%] {\n    display: none; }\n    header[_ngcontent-%COMP%]   .hidden[_ngcontent-%COMP%]    + .post-hidden[_ngcontent-%COMP%] {\n      display: block; }\n  header[_ngcontent-%COMP%]   .restart[_ngcontent-%COMP%] {\n    margin-right: 20px; }\n\ncontent[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 0;\n  width: 100%;\n  padding: 20px;\n  overflow: auto;\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n\n.game[_ngcontent-%COMP%], .leaderboard[_ngcontent-%COMP%] {\n  margin: 40px; }\n\n.no-players[_ngcontent-%COMP%] {\n  color: #999999;\n  font-size: 34px;\n  font-weight: 300; }\n\n.playing[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin: auto;\n  width: 440px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n  .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%] {\n    width: 200px;\n    text-align: center; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n      font-size: 20px;\n      color: #333333;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%], .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%] {\n      width: 60px;\n      display: inline-block;\n      vertical-align: middle;\n      padding: 10px 0;\n      color: #666666; }\n      .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%], .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        color: #999999; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%] {\n      font-size: 20px; }\n      .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        font-size: 20px;\n        vertical-align: middle;\n        position: relative;\n        top: -2px; }\n    .playing[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n      font-size: 12px; }\n    .playing[_ngcontent-%COMP%]   .player-n0[_ngcontent-%COMP%] {\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .playing[_ngcontent-%COMP%]   .player-n1[_ngcontent-%COMP%] {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n  .playing[_ngcontent-%COMP%]   .vs[_ngcontent-%COMP%] {\n    -webkit-box-ordinal-group: 3;\n        -ms-flex-order: 2;\n            order: 2;\n    color: #999;\n    font-size: 30px;\n    font-weight: 300;\n    width: 40px;\n    text-align: center; }\n\n.queue[_ngcontent-%COMP%] {\n  text-align: center;\n  padding-top: 30px; }\n  .queue[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n    color: #999999;\n    padding-bottom: 10px; }\n  .queue[_ngcontent-%COMP%]   .next-player[_ngcontent-%COMP%] {\n    padding: 4px 0; }\n\n.leaderboard[_ngcontent-%COMP%] {\n  width: 320px;\n  text-align: left; }\n  .leaderboard[_ngcontent-%COMP%]   .title[_ngcontent-%COMP%] {\n    border-bottom: 1px solid #cccccc;\n    padding-bottom: 4px;\n    margin-bottom: 6px;\n    font-size: 20px;\n    color: #333333; }\n  .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 4px 0; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n      display: inline-block;\n      vertical-align: middle;\n      line-height: 22px; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .number[_ngcontent-%COMP%] {\n      width: 30px;\n      text-align: center;\n      font-size: 20px;\n      color: #666666;\n      line-height: 20px; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .name[_ngcontent-%COMP%] {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1;\n      padding-left: 10px;\n      font-size: 18px;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%] {\n      font-size: 18px;\n      padding: 0 16px;\n      color: #333333; }\n      .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .victories[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        font-size: 16px;\n        vertical-align: middle;\n        position: relative;\n        top: -2px;\n        color: #999999;\n        margin-right: 2px; }\n    .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%] {\n      width: 60px;\n      color: #666666; }\n      .leaderboard[_ngcontent-%COMP%]   .player[_ngcontent-%COMP%]   .lives[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n        font-size: 12px;\n        line-height: 20px; }'];
 //# sourceMappingURL=tournament.component.scss.shim.ngstyle.js.map
 
 /***/ }),
