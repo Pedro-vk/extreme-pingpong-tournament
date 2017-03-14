@@ -10,6 +10,7 @@ before_install:
 after_success:
 - npm run build
 - npm run gh-pages-travis
+- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 env:
   global:
   - SSH_KEY=".travisGitHub"
