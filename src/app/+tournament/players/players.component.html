@@ -5,13 +5,14 @@
   <h3>Add player</h3>
 
   <div class="form">
-    <input type="text" [(ngModel)]="name"><!--
+    <input type="text" [(ngModel)]="name" (keyup.enter)="add(name); name = ''"><!--
  --><button (click)="add(name); name = ''" [disabled]="!name?.length">Add</button>
   </div>
 
   <h3>Players</h3>
 
   <div class="list">
+    <div *ngIf="!(players | async)?.length" class="no-players">No players yet.</div>
     <div *ngFor="let player of players | async; trackBy: player?.id">
       {{player.name}}
       <button (click)="remove(player)"><i class="material-icons">delete</i></button>
