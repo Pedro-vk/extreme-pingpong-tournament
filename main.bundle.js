@@ -2140,14 +2140,6 @@ function reducer(state, action) {
     if (state === void 0) { state = initialState; }
     switch (action.type) {
         // Add/Remove/Update players
-        case __WEBPACK_IMPORTED_MODULE_0__actions_players_actions__["a" /* ActionTypes */].MULTIADD: {
-            var playerList = action.payload;
-            return playerList
-                .reduce(function (accState, player) {
-                return (__assign({}, accState, { ids: accState.ids.concat([player.id]), entities: __assign({}, accState.entities, (_a = {}, _a[player.id] = resetPlayer(player), _a)) }));
-                var _a;
-            }, state);
-        }
         case __WEBPACK_IMPORTED_MODULE_0__actions_players_actions__["a" /* ActionTypes */].ADD: {
             var player = action.payload;
             return state.ids.indexOf(player.id) !== -1 ? state : __assign({}, state, { ids: state.ids.concat([player.id]), entities: __assign({}, state.entities, (_a = {}, _a[player.id] = resetPlayer(player), _a)) });
@@ -2394,27 +2386,15 @@ var TournamentComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(110);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
-/* unused harmony export MultiaddAction */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AddAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return RemoveAction; });
-/* unused harmony export ResetAction */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ResetLivesAction; });
 
 var ActionTypes = {
-    MULTIADD: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('players/multiadd'),
     ADD: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('players/add'),
     REMOVE: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('players/remove'),
-    RESET: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('players/reset'),
     RESET_LIVES: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('players/reset-lives'),
 };
-var MultiaddAction = (function () {
-    function MultiaddAction(payload) {
-        this.payload = payload;
-        this.type = ActionTypes.MULTIADD;
-    }
-    return MultiaddAction;
-}());
-
 var AddAction = (function () {
     function AddAction(payload) {
         this.payload = payload;
@@ -2429,14 +2409,6 @@ var RemoveAction = (function () {
         this.type = ActionTypes.REMOVE;
     }
     return RemoveAction;
-}());
-
-var ResetAction = (function () {
-    function ResetAction(payload) {
-        this.payload = payload;
-        this.type = ActionTypes.RESET;
-    }
-    return ResetAction;
 }());
 
 var ResetLivesAction = (function () {
