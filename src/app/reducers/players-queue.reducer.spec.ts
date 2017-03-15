@@ -61,4 +61,106 @@ describe('Players/queue reducer', () => {
       })},
     }));
   });
+
+  it('should shuffle the queue and set if is playing', () => {
+    let state = undefined;
+    state = [
+      new players.AddAction(<Player>{id: 't1', name: 'test1'}),
+      new players.AddAction(<Player>{id: 't2', name: 'test2'}),
+      new queue.ShuffleAction(),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      isPlaying: false,
+      playing: [undefined, undefined],
+    }))
+
+    state = [
+      new players.AddAction(<Player>{id: 't3', name: 'test3'}),
+      new players.AddAction(<Player>{id: 't4', name: 'test4'}),
+      new queue.ShuffleAction(),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      isPlaying: true,
+      playing: [jasmine.any(String), jasmine.any(String)],
+    }))
+  });
+
+  it('should manage the queue and the players data when the match is finished', () => {
+    let state = undefined;
+    state = [
+      new players.AddAction(<Player>{id: 't1', name: 'test1'}),
+      new players.AddAction(<Player>{id: 't2', name: 'test2'}),
+      new players.AddAction(<Player>{id: 't3', name: 'test3'}),
+      new players.AddAction(<Player>{id: 't4', name: 'test4'}),
+      new queue.ResultAction(<Player>{id: 't1'}, <Player>{id: 't2'}),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      queue: [],
+      playing: [undefined, undefined],
+    }));
+
+    state = [
+      new queue.ShuffleAction(),
+    ].reduce(reduceReducers, state);
+    state.playing = ['t1', 't2'];
+    state.queue = ['t3', 't4'];
+    state = [
+      new players.ResetLivesAction(2),
+      new queue.ResultAction(<Player>{id: 't1'}, <Player>{id: 't2'}),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      isPlaying: true,
+      playing: ['t1', 't3'],
+      queue: ['t4', 't2'],
+    }));
+
+    state = [
+      new queue.ResultAction(<Player>{id: 't1'}, <Player>{id: 't3'}),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      playing: ['t1', 't4'],
+      queue: ['t2', 't3'],
+    }));
+
+    state = [
+      new queue.ResultAction(<Player>{id: 't4'}, <Player>{id: 't1'}),
+      new queue.ResultAction(<Player>{id: 't4'}, <Player>{id: 't2'}),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      playing: ['t3', 't4'],
+      queue: ['t1', 't2'],
+    }));
+
+    // If a dead wins, the next player can be a dead
+    state = [
+      new queue.ResultAction(<Player>{id: 't4'}, <Player>{id: 't3'}),
+      new queue.ResultAction(<Player>{id: 't4'}, <Player>{id: 't1'}),
+      new queue.ResultAction(<Player>{id: 't2'}, <Player>{id: 't4'}),
+      new queue.ResultAction(<Player>{id: 't4'}, <Player>{id: 't2'}),
+      // new queue.ResultAction(<Player>{id: 't2'}, <Player>{id: 't4'}),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      playing: ['t3', 't4'],
+      queue: ['t1', 't2'],
+    }));
+
+    state = [
+      new queue.ResultAction(<Player>{id: 't2'}, <Player>{id: 't4'}),
+    ].reduce(reduceReducers, state);
+
+    expect(state).toEqual(jasmine.objectContaining({
+      isPlaying: false,
+      playing: ['t3', 't4'],
+      queue: ['t1', 't2'],
+    }));
+
+    Object.values(state.entities).forEach(_ => console.log(_))
+  });
 });
