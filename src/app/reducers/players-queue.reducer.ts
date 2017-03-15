@@ -18,7 +18,7 @@ export const initialState: State = {
   isPlaying: false,
 };
 
-export function reducer(state: State = initialState, action: players.Actions | queue.Actions): State {
+export function reducer(state: State = {...initialState}, action: players.Actions | queue.Actions): State {
   switch (action.type) {
 
     // Add/Remove/Update players
