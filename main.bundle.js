@@ -2111,13 +2111,12 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_queue_actions__ = __webpack_require__(78);
 /* unused harmony export initialState */
 /* harmony export (immutable) */ __webpack_exports__["a"] = reducer;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getIds; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getPlayerEntities; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getPlayers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getPlayersByVictories; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getQueue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getPlaying; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return isPlaying; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getPlayerEntities; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getPlayers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getPlayersByVictories; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getQueue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getPlaying; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return isPlaying; });
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -2233,7 +2232,6 @@ function resetPlayer(_a) {
     };
 }
 // Players
-var getIds = function (state) { return state.ids; };
 var getPlayerEntities = function (state) { return state.entities; };
 var getPlayers = function (state) { return Object.values(state.entities); };
 var getPlayersByVictories = function (state) {
@@ -2460,7 +2458,6 @@ var ResultAction = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment__ = __webpack_require__(111);
 /* harmony export (immutable) */ __webpack_exports__["a"] = reducer;
 /* unused harmony export getPlayersState */
-/* unused harmony export getPlayersIds */
 /* unused harmony export getPlayerEntities */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getPlayersList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getPlayersByVictories; });
@@ -2495,24 +2492,23 @@ function reducer(state, action) {
 // Store selectors
 // Players
 var getPlayersState = function (state) { return state.players; };
-var getPlayersIds = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["b" /* getIds */]);
-var getPlayerEntities = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["c" /* getPlayerEntities */]);
-var getPlayersList = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["d" /* getPlayers */]);
-var getPlayersByVictories = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["e" /* getPlayersByVictories */]);
+var getPlayerEntities = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["b" /* getPlayerEntities */]);
+var getPlayersList = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["c" /* getPlayers */]);
+var getPlayersByVictories = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["d" /* getPlayersByVictories */]);
 var getMaxVictories = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersList, function (players) {
     return players
         .reduce(function (acc, player) { return Math.max(acc, player.victories); }, 0);
 });
 // Queue
-var getQueue = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["f" /* getQueue */]);
-var getPlaying = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["g" /* getPlaying */]);
-var isPlaying = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["h" /* isPlaying */]);
+var getQueue = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["e" /* getQueue */]);
+var getPlaying = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["f" /* getPlaying */]);
+var isPlaying = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlayersState, __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__["g" /* isPlaying */]);
 // Player + Queue
 var getQueuePlayers = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getQueue, getPlayerEntities, function (queue, players) {
     return queue.map(function (id) { return players[id]; });
 });
-var getPlayingPlayers = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlaying, getPlayerEntities, function (queue, players) {
-    return queue.map(function (id) { return players[id]; });
+var getPlayingPlayers = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_reselect__["createSelector"])(getPlaying, getPlayerEntities, function (playing, players) {
+    return playing.map(function (id) { return players[id]; });
 });
 //# sourceMappingURL=index.js.map
 
