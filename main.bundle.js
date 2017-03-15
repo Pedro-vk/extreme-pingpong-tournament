@@ -44,7 +44,7 @@ var environment = {
 
 /***/ }),
 
-/***/ 169:
+/***/ 168:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -53,12 +53,12 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 169;
+webpackEmptyContext.id = 168;
 
 
 /***/ }),
 
-/***/ 170:
+/***/ 169:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66,7 +66,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gendir_app_app_module_ngfactory__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gendir_app_app_module_ngfactory__ = __webpack_require__(187);
 
 
 
@@ -79,11 +79,11 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a
 
 /***/ }),
 
-/***/ 182:
+/***/ 181:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__players_component_scss_shim_ngstyle__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__players_component_scss_shim_ngstyle__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_tournament_players_players_component__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(106);
@@ -399,7 +399,7 @@ var PlayersComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_28
 
 /***/ }),
 
-/***/ 183:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -419,11 +419,11 @@ var PlayersComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_28
 
 /***/ }),
 
-/***/ 184:
+/***/ 183:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tournament_component_scss_shim_ngstyle__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tournament_component_scss_shim_ngstyle__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_tournament_tournament_component__ = __webpack_require__(76);
@@ -1061,7 +1061,7 @@ var TournamentComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["
 
 /***/ }),
 
-/***/ 185:
+/***/ 184:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1081,14 +1081,14 @@ var TournamentComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["
 
 /***/ }),
 
-/***/ 186:
+/***/ 185:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component_scss_shim_ngstyle__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component_scss_shim_ngstyle__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_component__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_component__ = __webpack_require__(190);
 /* unused harmony export RenderType_AppComponent */
 /* unused harmony export View_AppComponent_0 */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponentNgFactory; });
@@ -1148,7 +1148,7 @@ var AppComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_28" /*
 
 /***/ }),
 
-/***/ 187:
+/***/ 186:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1168,26 +1168,26 @@ var AppComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_28" /*
 
 /***/ }),
 
-/***/ 188:
+/***/ 187:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_module__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_module__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_app_routing_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_app_routing_module__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngrx_store_src_ng2__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngrx_store_devtools_src_instrument__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngrx_store_devtools_src_instrument__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngrx_store_devtools_src_extension__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ngrx_store_devtools_src_devtools__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ngrx_store_src_dispatcher__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tournament_tournament_component_ngfactory__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__tournament_players_players_component_ngfactory__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component_ngfactory__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tournament_tournament_component_ngfactory__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__tournament_players_players_component_ngfactory__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component_ngfactory__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_tournament_tournament_component__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_tournament_players_players_component__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_reducers_index__ = __webpack_require__(79);
@@ -2036,7 +2036,7 @@ var AppModuleNgFactory = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* 
 
 /***/ }),
 
-/***/ 189:
+/***/ 188:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2050,11 +2050,11 @@ var AppModuleNgFactory = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* 
 
 /***/ }),
 
-/***/ 190:
+/***/ 189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tournament__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tournament__ = __webpack_require__(188);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 
 var routes = [
@@ -2073,7 +2073,7 @@ var AppRoutingModule = (function () {
 
 /***/ }),
 
-/***/ 191:
+/***/ 190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2088,7 +2088,7 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 192:
+/***/ 191:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2103,7 +2103,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 193:
+/***/ 192:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2201,13 +2201,10 @@ function reducer(state, action) {
                     var _a;
                 }, {}) });
         }
-        // Add players to queue
-        case __WEBPACK_IMPORTED_MODULE_1__actions_queue_actions__["a" /* ActionTypes */].ADD: {
-            return __assign({}, state, { queue: action.payload.map(function (player) { return player.id; }) });
-        }
         // Mix the queue
         case __WEBPACK_IMPORTED_MODULE_1__actions_queue_actions__["a" /* ActionTypes */].SHUFFLE: {
-            var queue_2 = state.queue.concat(state.playing.filter(function (_) { return _; })).filter(function (id, i, list) { return list.indexOf(id) === i; });
+            var queue_2 = Object.values(state.entities)
+                .map(function (player) { return player.id; });
             if (queue_2.length < 3) {
                 console.warn('Queue needs 3 or more players');
                 return __assign({}, state, { isPlaying: false });
@@ -2259,7 +2256,7 @@ var isPlaying = function (state) { return state.isPlaying; };
 /***/ 396:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(170);
+module.exports = __webpack_require__(169);
 
 
 /***/ }),
@@ -2269,13 +2266,10 @@ module.exports = __webpack_require__(170);
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngrx_store__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_players_actions__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_queue_actions__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reducers__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_players_actions__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_queue_actions__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reducers__ = __webpack_require__(79);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlayersComponent; });
-
 
 
 
@@ -2286,26 +2280,19 @@ var PlayersComponent = (function () {
     }
     PlayersComponent.prototype.ngOnInit = function () {
         this.players = this.store
-            .select(__WEBPACK_IMPORTED_MODULE_4__reducers__["b" /* getPlayersList */]);
+            .select(__WEBPACK_IMPORTED_MODULE_3__reducers__["b" /* getPlayersList */]);
     };
     PlayersComponent.prototype.add = function (name) {
-        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_2__actions_players_actions__["b" /* AddAction */]({ name: name, id: Math.random().toString(36).substr(2, 10) }));
+        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_1__actions_players_actions__["b" /* AddAction */]({ name: name, id: Math.random().toString(36).substr(2, 10) }));
         this.resetUsers();
     };
     PlayersComponent.prototype.remove = function (player) {
-        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_2__actions_players_actions__["c" /* RemoveAction */](player));
+        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_1__actions_players_actions__["c" /* RemoveAction */](player));
         this.resetUsers();
     };
     PlayersComponent.prototype.resetUsers = function () {
-        var _this = this;
-        this.store
-            .select(__WEBPACK_IMPORTED_MODULE_4__reducers__["b" /* getPlayersList */])
-            .take(1)
-            .subscribe(function (playerList) {
-            _this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_3__actions_queue_actions__["b" /* AddAction */](playerList));
-            _this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_3__actions_queue_actions__["c" /* ShuffleAction */]());
-            _this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_2__actions_players_actions__["d" /* ResetLivesAction */](3));
-        });
+        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_2__actions_queue_actions__["b" /* ShuffleAction */]());
+        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_1__actions_players_actions__["d" /* ResetLivesAction */](3));
     };
     PlayersComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["h" /* Store */] }]; };
     return PlayersComponent;
@@ -2320,9 +2307,9 @@ var PlayersComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngrx_store__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_take__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(361);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_players_actions__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_queue_actions__ = __webpack_require__(78);
@@ -2366,11 +2353,11 @@ var TournamentComponent = (function () {
             .select(__WEBPACK_IMPORTED_MODULE_5__reducers__["g" /* getMaxVictories */]);
     };
     TournamentComponent.prototype.startTournament = function () {
-        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_4__actions_queue_actions__["c" /* ShuffleAction */]());
+        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_4__actions_queue_actions__["b" /* ShuffleAction */]());
         this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_3__actions_players_actions__["d" /* ResetLivesAction */](3));
     };
     TournamentComponent.prototype.matchFinished = function (winner, loser) {
-        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_4__actions_queue_actions__["d" /* ResultAction */](winner, loser));
+        this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_4__actions_queue_actions__["c" /* ResultAction */](winner, loser));
     };
     TournamentComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["h" /* Store */] }]; };
     return TournamentComponent;
@@ -2429,23 +2416,13 @@ var ResetLivesAction = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(110);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AddAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ShuffleAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ResultAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ShuffleAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ResultAction; });
 
 var ActionTypes = {
-    ADD: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('queue/add'),
     SHUFFLE: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('queue/shuffle'),
     RESULT: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* type */])('queue/result'),
 };
-var AddAction = (function () {
-    function AddAction(payload) {
-        this.payload = payload;
-        this.type = ActionTypes.ADD;
-    }
-    return AddAction;
-}());
-
 var ShuffleAction = (function () {
     function ShuffleAction(payload) {
         this.payload = payload;
@@ -2471,15 +2448,15 @@ var ResultAction = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngrx_store__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_core_compose__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_core_compose__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_core_compose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ngrx_core_compose__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngrx_store_freeze__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngrx_store_freeze__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngrx_store_freeze___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ngrx_store_freeze__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngrx_store_localstorage__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngrx_store_localstorage__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngrx_store_localstorage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ngrx_store_localstorage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_reselect__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_reselect__ = __webpack_require__(356);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_reselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_reselect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__players_queue_reducer__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment__ = __webpack_require__(111);
 /* harmony export (immutable) */ __webpack_exports__["a"] = reducer;
 /* unused harmony export getPlayersState */
