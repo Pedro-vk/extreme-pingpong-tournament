@@ -2137,7 +2137,7 @@ var initialState = {
     isPlaying: false,
 };
 function reducer(state, action) {
-    if (state === void 0) { state = initialState; }
+    if (state === void 0) { state = __assign({}, initialState); }
     switch (action.type) {
         // Add/Remove/Update players
         case __WEBPACK_IMPORTED_MODULE_0__actions_players_actions__["a" /* ActionTypes */].ADD: {
