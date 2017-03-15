@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/take';
 
 import { Player } from '../../models';
 import * as players from '../../actions/players.actions';
@@ -34,13 +33,7 @@ export class PlayersComponent implements OnInit {
   }
 
   resetUsers(): void {
-    this.store
-      .select(getPlayersList)
-      .take(1)
-      .subscribe((playerList: Player[]) => {
-        this.store.dispatch(new queue.AddAction(playerList));
-        this.store.dispatch(new queue.ShuffleAction());
-        this.store.dispatch(new players.ResetLivesAction(3));
-      });
+    this.store.dispatch(new queue.ShuffleAction());
+    this.store.dispatch(new players.ResetLivesAction(3));
   }
 }

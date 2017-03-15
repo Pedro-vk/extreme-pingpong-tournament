@@ -74,9 +74,6 @@ describe('PlayersComponent', () => {
     component.resetUsers();
 
     expect(spyDispatch).toHaveBeenCalledWith(jasmine.objectContaining({
-      type: queue.ActionTypes.ADD,
-    }));
-    expect(spyDispatch).toHaveBeenCalledWith(jasmine.objectContaining({
       type: queue.ActionTypes.SHUFFLE,
     }));
     expect(spyDispatch).toHaveBeenCalledWith(jasmine.objectContaining({

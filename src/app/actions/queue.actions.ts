@@ -3,16 +3,10 @@ import { type } from './util';
 import { Player } from '../models/player';
 
 export const ActionTypes = {
-  ADD:          type('queue/add'),
-  SHUFFLE:      type('queue/shuffle'),
-  RESULT:         type('queue/result'),
+  SHUFFLE:  type('queue/shuffle'),
+  RESULT:   type('queue/result'),
 };
 
-export class AddAction implements Action {
-  type = ActionTypes.ADD;
-
-  constructor(public payload: Player[]) { }
-}
 export class ShuffleAction implements Action {
   type = ActionTypes.SHUFFLE;
 
@@ -29,5 +23,4 @@ export class ResultAction implements Action {
 
 export type Actions
   = ShuffleAction
-  | AddAction
   | ResultAction;

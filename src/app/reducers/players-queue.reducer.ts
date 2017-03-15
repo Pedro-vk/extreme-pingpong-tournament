@@ -104,18 +104,10 @@ export function reducer(state: State = {...initialState}, action: players.Action
       };
     }
 
-    // Add players to queue
-    case queue.ActionTypes.ADD: {
-      return {
-        ...state,
-        queue: (<Player[]>action.payload).map((player: Player) => player.id),
-      };
-    }
-
     // Mix the queue
     case queue.ActionTypes.SHUFFLE: {
-      let queue = [...state.queue, ...state.playing.filter(_ => _)]
-        .filter((id, i, list) => list.indexOf(id) === i);
+      let queue = Object.values(state.entities)
+        .map((player: Player) => player.id);
       if (queue.length < 3) {
         console.warn('Queue needs 3 or more players');
         return {
