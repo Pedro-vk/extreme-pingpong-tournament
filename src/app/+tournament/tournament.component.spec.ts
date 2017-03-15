@@ -27,7 +27,7 @@ describe('TournamentComponent', () => {
       (selector: any) => Observable.of({players: {
         ...initialState,
         entities: {
-          ['test1']: {lives: 2, initialLives: 3},
+          test1: {lives: 2, initialLives: 3},
         },
         queue: ['test1'],
       }}).map(selector),

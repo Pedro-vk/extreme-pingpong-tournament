@@ -160,7 +160,5 @@ describe('Players/queue reducer', () => {
       playing: ['t3', 't4'],
       queue: ['t1', 't2'],
     }));
-
-    Object.values(state.entities).forEach(_ => console.log(_))
   });
 });

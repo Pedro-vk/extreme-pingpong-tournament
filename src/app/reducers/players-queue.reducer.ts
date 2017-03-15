@@ -145,8 +145,6 @@ function resetPlayer({id, name}: Player): Player {
 }
 
 // Players
-export const getIds = (state: State) => state.ids;
-
 export const getPlayerEntities = (state: State) => state.entities;
 
 export const getPlayers = (state: State) => Object.values(state.entities);

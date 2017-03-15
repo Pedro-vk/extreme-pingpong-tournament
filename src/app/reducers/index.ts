@@ -38,7 +38,6 @@ export function reducer(state: any, action: any) {
 // Players
 export const getPlayersState = (state: State) => state.players;
 
-export const getPlayersIds = createSelector(getPlayersState, fromPlayersQueue.getIds);
 export const getPlayerEntities = createSelector(getPlayersState, fromPlayersQueue.getPlayerEntities);
 export const getPlayersList = createSelector(getPlayersState, fromPlayersQueue.getPlayers);
 export const getPlayersByVictories = createSelector(getPlayersState, fromPlayersQueue.getPlayersByVictories);
@@ -57,6 +56,6 @@ export const isPlaying = createSelector(getPlayersState, fromPlayersQueue.isPlay
 export const getQueuePlayers = createSelector(getQueue, getPlayerEntities, (queue: string[], players: {[id: string]: Player}) => {
   return queue.map((id: string) => players[id]);
 });
-export const getPlayingPlayers = createSelector(getPlaying, getPlayerEntities, (queue: string[], players: {[id: string]: Player}) => {
-  return queue.map((id: string) => players[id]);
+export const getPlayingPlayers = createSelector(getPlaying, getPlayerEntities, (playing: string[], players: {[id: string]: Player}) => {
+  return playing.map((id: string) => players[id]);
 });
