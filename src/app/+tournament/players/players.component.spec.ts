@@ -70,6 +70,11 @@ describe('PlayersComponent', () => {
     }));
   });
 
+  it('should track the players by id', () => {
+    expect(component.trackById(0, {})).toBeUndefined();
+    expect(component.trackById(0, {id: 'test'})).toBe('test');
+  });
+
   it('should reset the tournament', () => {
     component.resetUsers();
 
