@@ -9,8 +9,8 @@
 <content>
 
   <div class="game" *ngIf="isPlaying | async">
-    <div class="playing" *ngIf="playing | async; let playingList">
-      <div class="player player-n{{i}}" *ngFor="let player of playing | async; let i = index; trackBy: player?.id">
+    <div class="playing">
+      <div class="player player-n{{i}}" *ngFor="let player of playing | async as playingList; let i = index; trackBy: player?.id">
         <div class="name">
           {{player?.name}}
         </div>

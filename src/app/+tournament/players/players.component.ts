@@ -14,6 +14,7 @@ import { State, getPlayersList } from '../../reducers';
   styleUrls: ['./players.component.scss']
 })
 export class PlayersComponent implements OnInit {
+  name: string;
   players: Observable<Player[]>;
 
   constructor(private store: Store<State>) { }
@@ -30,6 +31,10 @@ export class PlayersComponent implements OnInit {
   remove(player: Player): void {
     this.store.dispatch(new players.RemoveAction(player));
     this.resetUsers();
+  }
+
+  trackById(index: number, object: any): string {
+    return object.id || undefined;
   }
 
   resetUsers(): void {

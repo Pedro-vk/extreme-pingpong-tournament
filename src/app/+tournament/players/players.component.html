@@ -13,7 +13,7 @@
 
   <div class="list">
     <div *ngIf="!(players | async)?.length" class="no-players">No players yet.</div>
-    <div *ngFor="let player of players | async; trackBy: player?.id">
+    <div *ngFor="let player of players | async; trackBy: trackById">
       {{player.name}}
       <button (click)="remove(player)"><i class="material-icons">delete</i></button>
     </div>
