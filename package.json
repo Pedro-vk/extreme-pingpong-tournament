@@ -12,10 +12,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "npm run clean",
     "build": "ng build --aot --sourcemap --prod",
+    "postbuild": "npm run cache",
     "test": "ng test --single-run --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "clean": "rm -rf ./dist/",
+    "cache": "sw-precache --config=src/sw-precache.config.js --root=dist",
     "create-cname": "echo $(cat package.json | grep '\"homepage\"' | cut -d '\"' -f 4) > dist/CNAME",
     "gh-pages-travis": "npm run create-cname && gh-pages-travis"
   },
@@ -57,6 +61,7 @@
     "karma-phantomjs-launcher": "1.0.4",
     "phantomjs": "^2.1.7",
     "protractor": "~5.1.0",
+    "sw-precache": "^5.1.0",
     "ts-node": "~3.0.2",
     "tslint": "~5.0.0",
     "typescript": "~2.2.1"
