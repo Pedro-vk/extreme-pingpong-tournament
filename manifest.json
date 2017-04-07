@@ -3,7 +3,7 @@
   "short_name": "Extreme Pingpong",
   "description": "Extreme Pingpong tournament with matches control and leaderboard.",
   "lang": "en",
-  "start_url": "/extreme-pingpong-tournament",
+  "start_url": "/extreme-pingpong-tournament/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#fafafa",
