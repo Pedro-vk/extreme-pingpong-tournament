@@ -9,9 +9,9 @@ if (environment.production) {
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      (<any>navigator).serviceWorker.register('service-worker.js').then(function(reg) {
+      (<any>navigator).serviceWorker.register(environment.serviceWorkerPath + 'service-worker.js').then(function(reg) {
         reg.onupdatefound = function() {
-          var installingWorker = reg.installing;
+          const installingWorker = reg.installing;
 
           installingWorker.onstatechange = function() {
             switch (installingWorker.state) {

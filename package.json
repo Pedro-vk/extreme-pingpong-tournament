@@ -4,24 +4,25 @@
   "description": "Extreme Pingpong tournament",
   "license": "MIT",
   "private": true,
-  "homepage": "extreme-pingpong.xitrus.es",
+  "homepage": "pedro-vk.github.io/extreme-pingpong-tournament",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pedro-vk/GraphQL-test"
+    "url": "https://github.com/Pedro-vk/extreme-pingpong-tournament"
   },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "prebuild": "npm run clean",
-    "build": "ng build --aot --sourcemap --prod",
+    "build": "ng build --aot --sourcemap --prod --base-href='/extreme-pingpong-tournament/' --deploy-url='/extreme-pingpong-tournament'",
     "postbuild": "npm run cache",
     "test": "ng test --single-run --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean": "rm -rf ./dist/",
-    "cache": "sw-precache --config=src/sw-precache.config.js --root=dist",
+    "cache": "sw-precache --config=src/sw-precache.config.js",
+    "postcache": "mv service-worker.js dist/service-worker.js",
     "create-cname": "echo $(cat package.json | grep '\"homepage\"' | cut -d '\"' -f 4) > dist/CNAME",
-    "gh-pages-travis": "npm run create-cname && gh-pages-travis"
+    "gh-pages-travis": "gh-pages-travis"
   },
   "dependencies": {
     "@angular/common": ">=4.0.0-beta <5.0.0",

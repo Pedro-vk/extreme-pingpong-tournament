@@ -1,14 +1,7 @@
 module.exports = {
-  staticFileGlobs: [
-    'dist/*.ico',
-    'dist/*.html',
-    'dist/**/*.bundle.js',
-    'dist/**/*.bundle.css',
-    'dist/assets/**/*'
-  ],
-  stripPrefix: 'dist/',
+  staticFileGlobs: [],
   runtimeCaching: [{
-    urlPattern: /^https:\/\/(fonts\.gstatic\.com|fonts\.googleapis\.com).+/,
+    urlPattern: /^https:\/\/(fonts\.gstatic\.com|fonts\.googleapis\.com|pedro\-vk\.github\.io\/extreme\-pingpong\-tournament).+/,
     handler: 'networkFirst'
   }]
 };
