@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["extreme-pingpong-tournament/assets/icon-144.png","3601b340443d7e182a94e057d7dc420e"],["extreme-pingpong-tournament/assets/icon-192.png","a32c5c66cd6448098b8278b93afd7938"],["extreme-pingpong-tournament/favicon.ico","1d009153919565a83363ffbeb90e2285"],["extreme-pingpong-tournament/index.html","7e7948230a0f1e0654963972253948bf"],["extreme-pingpong-tournament/inline.e3da5369dbbede3d1d4f.bundle.js","f184e602acd632dbe57979fe67a867ee"],["extreme-pingpong-tournament/main.08ddfb1afff7f46e84a1.bundle.js","27e5edcb2e7e480a67802e20f6f29cec"],["extreme-pingpong-tournament/polyfills.029a048420f691a8fe07.bundle.js","fd10fff81e6249e1ac2163e91dd242f8"],["extreme-pingpong-tournament/styles.f28b50c57bd0da36664b.bundle.css","6026727ef4fbbb0ca75c6003acb10115"],["extreme-pingpong-tournament/vendor.898a9be69d4cd5ad238b.bundle.js","6e259524f2585432a278f9c62b6ee68f"]];
+var precacheConfig = [["assets/icon-144.png","3601b340443d7e182a94e057d7dc420e"],["assets/icon-192.png","a32c5c66cd6448098b8278b93afd7938"],["favicon.ico","1d009153919565a83363ffbeb90e2285"],["index.html","e3adae8a672a2cf72fad0470e712e3de"],["inline.141b00e7ea4135d18ee3.bundle.js","909c342963129bb96fe42e6fc54f823c"],["main.651d939b3e8c0214f52c.bundle.js","76d02aae857ec7dc0c6fa2099210b39f"],["polyfills.029a048420f691a8fe07.bundle.js","fd10fff81e6249e1ac2163e91dd242f8"],["styles.f28b50c57bd0da36664b.bundle.css","6026727ef4fbbb0ca75c6003acb10115"],["vendor.898a9be69d4cd5ad238b.bundle.js","6e259524f2585432a278f9c62b6ee68f"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
