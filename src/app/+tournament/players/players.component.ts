@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -11,7 +11,8 @@ import { State, getPlayersList } from '../../reducers';
 @Component({
   selector: 'ept-players',
   templateUrl: './players.component.html',
-  styleUrls: ['./players.component.scss']
+  styleUrls: ['./players.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlayersComponent implements OnInit {
   name: string;

@@ -10,14 +10,12 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { reducer } from './reducers'
 import { AppComponent } from './app.component';
-import { TournamentComponent } from './+tournament/tournament.component';
-import { PlayersComponent } from './+tournament/players/players.component';
+import { TournamentComponent, PlayersComponent, GameComponent } from './+tournament';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TournamentComponent,
-    PlayersComponent,
+    TournamentComponent, PlayersComponent, GameComponent,
   ],
   imports: [
     BrowserModule,

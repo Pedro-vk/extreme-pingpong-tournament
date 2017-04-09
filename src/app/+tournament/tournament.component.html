@@ -2,69 +2,11 @@
   <h2>
     Tournament
   </h2>
-  <button class="restart" (click)="startTournament()">Restart tournament</button>
+  <button class="restart" *ngIf="isPlaying | async" (click)="startTournament()">Restart tournament</button>
   <button routerLink="/players" routerLinkActive="hidden">Edit players</button>
   <button class="post-hidden" routerLink="/">Close</button>
 </header>
 <content>
-
-  <div class="game" *ngIf="isPlaying | async">
-    <div class="playing">
-      <div class="player player-n{{i}}" *ngFor="let player of playing | async as playingList; let i = index; trackBy: player?.id">
-        <div class="name">
-          {{player?.name}}
-        </div>
-        <div class="victories">
-          <i class="material-icons">whatshot</i>
-          {{player?.victories}}
-        </div>
-        <div class="lives">
-          <i class="material-icons" *ngFor="let hasLive of player?.livesList">
-            {{hasLive ? 'favorite' : 'favorite_border'}}
-          </i>
-        </div>
-        <div>
-          <button (click)="matchFinished(player, playingList[1 - i])">Winner!</button>
-        </div>
-      </div>
-      <div class="vs">
-        .vs
-      </div>
-    </div>
-    <div class="queue">
-      <div class="title">next</div>
-      <div class="next-player" *ngFor="let player of queue | async; trackBy: player?.id">
-        {{player?.name}}
-      </div>
-    </div>
-  </div>
-  <div class="no-players" *ngIf="!(leaderboard | async)?.length">
-    No players yet.
-  </div>
-  <div class="leaderboard" *ngIf="(leaderboard | async)?.length">
-    <div class="title">Leaderboard</div>
-    <div class="player" *ngFor="let player of leaderboard | async; let i = index; let first = first; trackBy: player?.id">
-      <span class="number" *ngIf="player.victories === (maxVictories | async)">
-        <i class="material-icons">whatshot</i>
-      </span>
-      <span class="number" *ngIf="player.victories !== (maxVictories | async)">
-        {{i + 1}}
-      </span>
-      <span class="name">
-        {{player?.name}}
-      </span>
-      <span class="victories">
-        <i class="material-icons">whatshot</i>
-        {{player?.victories}}
-      </span>
-      <span class="lives">
-        <i class="material-icons" *ngFor="let hasLive of player?.livesList">
-          {{hasLive ? 'favorite' : 'favorite_border'}}
-        </i>
-      </span>
-    </div>
-  </div>
-
   <router-outlet></router-outlet>
 </content>
 

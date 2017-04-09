@@ -1,18 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
-import { TournamentComponent } from './tournament.component';
-import { State } from '../reducers';
-import * as players from '../actions/players.actions';
-import * as queue from '../actions/queue.actions';
-import { initialState } from '../reducers/players-queue.reducer';
+import { GameComponent } from './game.component';
+import { State } from '../../reducers';
+import * as queue from '../../actions/queue.actions';
+import { initialState } from '../../reducers/players-queue.reducer';
 
-describe('TournamentComponent', () => {
-  let component: TournamentComponent;
-  let fixture: ComponentFixture<TournamentComponent>;
+describe('GameComponent', () => {
+  let component: GameComponent;
+  let fixture: ComponentFixture<GameComponent>;
   let store: any;
   let spyDispatch: jasmine.Spy;
   let spySelect: jasmine.Spy;
@@ -40,7 +40,7 @@ describe('TournamentComponent', () => {
         CommonModule,
         RouterTestingModule,
       ],
-      declarations: [ TournamentComponent ],
+      declarations: [ GameComponent ],
       providers: [
         {provide: Store, useValue: store}
       ],
@@ -49,7 +49,7 @@ describe('TournamentComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TournamentComponent);
+    fixture = TestBed.createComponent(GameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -58,15 +58,15 @@ describe('TournamentComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should reset the tournament', () => {
-    component.startTournament();
+  it('should dispatch the match result', () => {
+    component.matchFinished(<any>{id: 'test1'}, <any>{id: 'test2'});
 
     expect(spyDispatch).toHaveBeenCalledWith(jasmine.objectContaining({
-      type: queue.ActionTypes.SHUFFLE,
-    }));
-    expect(spyDispatch).toHaveBeenCalledWith(jasmine.objectContaining({
-      type: players.ActionTypes.RESET_LIVES,
-      payload: 3,
+      type: queue.ActionTypes.RESULT,
+      payload: {
+        winner: jasmine.objectContaining({id: 'test1'}),
+        loser: jasmine.objectContaining({id: 'test2'}),
+      },
     }));
   });
 });
