@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [];
+var precacheConfig = [["assets/icon-144.png","9d4e1765984ba73dbbf823517a7ed4bd"],["assets/icon-192.png","0ae1335ff4ae601865e118a65725b376"],["assets/icon-48.png","1e72175fddcee84ca007e4536882dbe8"],["assets/icon-512.png","f60b400c7d1a3047f57d603233f2ba17"],["assets/icon-72.png","5207da82775930fd265348b9354d8f2f"],["assets/icon-92.png","94e5bfba510aac4535988d2b499a5cf7"],["favicon.ico","ba5595d12038acc885a0276277898ae8"],["index.html","e3adae8a672a2cf72fad0470e712e3de"],["inline.141b00e7ea4135d18ee3.bundle.js","909c342963129bb96fe42e6fc54f823c"],["main.651d939b3e8c0214f52c.bundle.js","76d02aae857ec7dc0c6fa2099210b39f"],["polyfills.029a048420f691a8fe07.bundle.js","fd10fff81e6249e1ac2163e91dd242f8"],["styles.f28b50c57bd0da36664b.bundle.css","6026727ef4fbbb0ca75c6003acb10115"],["vendor.898a9be69d4cd5ad238b.bundle.js","2e178eeec77b3868266800f342be6575"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -283,7 +283,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/^https:\/\/(fonts\.gstatic\.com|fonts\.googleapis\.com|pedro\-vk\.github\.io\/extreme\-pingpong\-tournament).+/, toolbox.networkFirst, {});
+toolbox.router.get(/^https:\/\/(fonts\.gstatic\.com|fonts\.googleapis\.com).+/, toolbox.networkFirst, {});
 
 
 
