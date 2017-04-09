@@ -12,6 +12,7 @@ header {
   h1 {
     font-weight: 300;
     margin: 0;
+    font-size: 32px;
   }
 }
 content {
@@ -19,4 +20,19 @@ content {
   top: 80px;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  header {
+    text-align: center;
+    height: 60px;
+    line-height: 60px - 2px;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+  content {
+    top: 60px;
+  }
 }

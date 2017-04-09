@@ -23,7 +23,7 @@ header {
     display: none;
 
     & + .post-hidden {
-      display: block;
+      display: initial;
     }
   }
   .restart {
@@ -39,4 +39,20 @@ content {
   overflow: auto;
   text-align: center;
   display: flex;
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 50px;
+    line-height: 50px - 5px;
+    display: block;
+    text-align: center;
+
+    h2 {
+      display: none;
+    }
+  }
+  content {
+    top: 50px;
+  }
 }

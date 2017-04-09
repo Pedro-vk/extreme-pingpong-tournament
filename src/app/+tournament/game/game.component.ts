@@ -5,7 +5,6 @@ import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/map';
 
 import { Player } from '../../models';
-import * as players from '../../actions/players.actions';
 import * as queue from '../../actions/queue.actions';
 import { State, getPlayersByVictories, getQueuePlayers, getPlayingPlayers, isPlaying, getMaxVictories } from '../../reducers';
 
@@ -50,11 +49,6 @@ export class GameComponent implements OnInit {
       .select(isPlaying);
     this.maxVictories = this.store
       .select(getMaxVictories);
-  }
-
-  startTournament(): void {
-    this.store.dispatch(new queue.ShuffleAction());
-    this.store.dispatch(new players.ResetLivesAction(3));
   }
 
   matchFinished(winner: Player, loser: Player): void {

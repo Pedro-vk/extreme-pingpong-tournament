@@ -21,7 +21,7 @@
     "clean": "rm -rf ./dist/",
     "cache": "sw-precache --config=src/sw-precache.config.js --root=dist",
     "create-cname": "echo $(cat package.json | grep '\"homepage\"' | cut -d '\"' -f 4) > dist/CNAME",
-    "heroku": "cp ./.heroku/* ./dist",
+    "heroku": "cp -fr ./.heroku/. ./dist",
     "gh-pages-travis": "npm run create-cname && npm run heroku && gh-pages-travis"
   },
   "dependencies": {

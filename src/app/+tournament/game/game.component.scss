@@ -20,7 +20,7 @@
   justify-content: center;
 
   .player {
-    width: 200px;
+    width: 190px;
     text-align: center;
 
     .name {
@@ -152,5 +152,41 @@
   }
   .leaderboard {
     margin: 40px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  :host {
+    width: 100%;
+  }
+  .game,
+  .leaderboard {
+    margin: 40px 0;
+  }
+  .playing {
+    width: 100%;
+
+    .vs {
+      font-size: 18px;
+      width: 20px;
+    }
+  }
+  .queue {
+    .next-player {
+      display: none;
+      &:nth-child(-n+4) {
+        display: block;
+      }
+      &:nth-child(3) {
+        opacity: .7;
+      }
+      &:nth-child(4) {
+        opacity: .4;
+      }
+    }
+  }
+  .leaderboard {
+    width: 100%;
   }
 }
