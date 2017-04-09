@@ -21,7 +21,8 @@
     "clean": "rm -rf ./dist/",
     "cache": "sw-precache --config=src/sw-precache.config.js --root=dist",
     "create-cname": "echo $(cat package.json | grep '\"homepage\"' | cut -d '\"' -f 4) > dist/CNAME",
-    "gh-pages-travis": "npm run create-cname && gh-pages-travis"
+    "heroku": "cp ./.heroku/* ./dist",
+    "gh-pages-travis": "npm run create-cname && npm run heroku && gh-pages-travis"
   },
   "dependencies": {
     "@angular/common": ">=4.0.0-beta <5.0.0",

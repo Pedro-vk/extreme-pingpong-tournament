@@ -12,7 +12,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, environment.production ? {useHash: true} : undefined)],
+  imports: [RouterModule.forRoot(routes, {useHash: environment.useHash})],
   exports: [RouterModule],
   providers: []
 })
