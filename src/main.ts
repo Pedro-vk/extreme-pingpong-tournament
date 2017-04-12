@@ -18,6 +18,7 @@ if (environment.production) {
               case 'installed':
                 if ((<any>navigator).serviceWorker.controller) {
                   console.log('New or updated content is available.');
+                  window.location.reload(true);
                 } else {
                   console.log('Content is now available offline!');
                 }
