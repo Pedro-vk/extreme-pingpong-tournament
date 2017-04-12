@@ -36,6 +36,7 @@ header {
       color: #333333;
       font-weight: 400;
       transition: all .3s ease;
+      cursor: pointer;
 
       &:hover {
         color: #777777;
@@ -50,17 +51,33 @@ content {
   width: 100%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 680px) {
   header {
-    text-align: center;
-    height: 60px;
-    line-height: 60px - 2px;
-
     h1 {
       font-size: 24px;
     }
   }
-  content {
-    top: 60px;
+}
+@media (max-width: 570px) {
+  header {
+    text-align: center;
+    display: block;
+    line-height: 80px * .5;
+
+    h1 {
+      font-size: 24px;
+      height: 80px * .5;
+      line-height: 80px * .6;
+    }
+    .info {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 380px) {
+  header {
+    .info {
+      font-size: 12px;
+    }
   }
 }
