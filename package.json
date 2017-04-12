@@ -1,13 +1,14 @@
 {
   "name": "extreme-pingpong-tournament",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Extreme Pingpong tournament",
   "license": "MIT",
   "private": true,
+  "author": "Pedro Gutiérrez <info@xitrus.es> (http://xitrus.es)",
   "homepage": "extreme-pingpong.xitrus.es",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pedro-vk/GraphQL-test"
+    "url": "https://github.com/Pedro-vk/extreme-pingpong-tournament"
   },
   "scripts": {
     "ng": "ng",

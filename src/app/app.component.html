@@ -2,6 +2,21 @@
   <h1>
     Extreme Pingpong
   </h1>
+  <div class="info">
+    <span class="info__item">
+      Author: <span>{{projectAuthor}}</span>
+    </span>
+    <span class="info__item">
+      Version: <span>{{projectVersion}}</span>
+    </span>
+    <a
+      class="info__item"
+      target="_blank"
+      [href]="githubRepositoryUrl">
+
+      Github
+    </a>
+  </div>
 </header>
 <content>
   <router-outlet></router-outlet>
