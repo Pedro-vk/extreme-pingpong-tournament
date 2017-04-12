@@ -17,20 +17,20 @@ if (environment.production) {
             switch (installingWorker.state) {
               case 'installed':
                 if ((<any>navigator).serviceWorker.controller) {
-                  console.log('New or updated content is available.');
+                  console.log('[SW] New or updated content is available.');
                   window.location.reload(true);
                 } else {
-                  console.log('Content is now available offline!');
+                  console.log('[SW] Content is now available offline!');
                 }
                 break;
               case 'redundant':
-                console.error('The installing service worker became redundant.');
+                console.error('[SW] The installing servicbe worker became redundant.');
                 break;
             }
           };
         };
       }).catch(function(e) {
-        console.error('Error during service worker registration:', e);
+        console.error('[SW] Error during service worker registration:', e);
       });
     });
   }
