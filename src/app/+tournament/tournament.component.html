@@ -2,7 +2,7 @@
   <h2>
     Tournament
   </h2>
-  <button class="restart" *ngIf="isPlaying | async" (click)="startTournament()">Restart tournament</button>
+  <button class="restart" *ngIf="canRestart | async" (click)="startTournament()">Restart tournament</button>
   <button routerLink="/players" routerLinkActive="hidden">Edit players</button>
   <button class="post-hidden" routerLink="/">Close</button>
 </header>

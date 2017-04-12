@@ -1,10 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
 
+import { Player } from '../models';
 import * as players from '../actions/players.actions';
 import * as queue from '../actions/queue.actions';
-import { State, isPlaying } from '../reducers';
+import { State, getPlayersList } from '../reducers';
 
 @Component({
   selector: 'ept-tournament',
@@ -13,13 +15,14 @@ import { State, isPlaying } from '../reducers';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TournamentComponent implements OnInit {
-  isPlaying: Observable<boolean>;
+  canRestart: Observable<boolean>;
 
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
-    this.isPlaying = this.store
-      .select(isPlaying);
+    this.canRestart = this.store
+      .select(getPlayersList)
+      .map((queue: Player[]) => queue.length >= 3);
   }
 
   startTournament(): void {
